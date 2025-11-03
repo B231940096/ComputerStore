@@ -13,39 +13,95 @@ import {
 import { dashboard } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
+import { BookOpen, Box, Computer, Folder, Gamepad2, Gift, Laptop, LayoutGrid, Monitor, PcCase, Server, Smartphone } from 'lucide-react';
 import AppLogo from './app-logo';
+import { route } from 'ziggy-js';
 
 const mainNavItems: NavItem[] = [
-    {
-        title: 'Dashboard',
-        href: dashboard(),
-        icon: LayoutGrid,
-    },
+  {
+title: 'Нүүр хуудас',
+href: dashboard(),
+icon: BookOpen,
+  },
+  {
+    title: 'Суурин компьютерын эд анги',
+    href: dashboard(),
+    icon: LayoutGrid,
+  },
+  {
+    title: 'Компьютерын хэрэгсэл',
+    href: dashboard(),
+    icon: Computer,
+  },
+  {
+    title: 'Ширээ / Сандал / Гэрэл',
+    href: dashboard(),
+    icon: Box,
+  },
+  {
+    title: 'Компьютерын дэлгэц',
+    href: dashboard(),
+    icon: Monitor,
+  },
+  {
+    title: 'Бэлэн компьютер',
+    href: dashboard(),
+    icon: PcCase,
+  },
+  {
+    title: 'Консоль',
+    href: dashboard(),
+    icon: Gamepad2,
+  },
+  {
+    title: 'Зөөврийн компьютер',
+    href: dashboard(),
+    icon: Laptop,
+  },
+  {
+    title: 'Гар утас, Таблет',
+    href: dashboard(),
+    icon: Smartphone,
+  },
+  {
+    title: 'Сүлжээний төхөөрөмж',
+    href: dashboard(),
+    icon: Server,
+  },
+  {
+    title: 'Divoom',
+    href: dashboard(),
+    icon: Box,
+  },
+  {
+    title: 'Фигур / Сувинер',
+    href: dashboard(),
+    icon: Gift,
+  },
 ];
 
 const footerNavItems: NavItem[] = [
-    {
-        title: 'Repository',
-        href: 'https://github.com/laravel/react-starter-kit',
-        icon: Folder,
-    },
-    {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits#react',
-        icon: BookOpen,
-    },
+    // {
+    //     title: 'Repository',
+    //     href: 'https://github.com/laravel/react-starter-kit',
+    //     icon: Folder,
+    // },
+    // {
+    //     title: 'Documentation',
+    //     href: 'https://laravel.com/docs/starter-kits#react',
+    //     icon: BookOpen,
+    // },
 ];
 
 export function AppSidebar() {
     return (
-        <Sidebar collapsible="icon" variant="inset">
+        <Sidebar className="w-67" collapsible="icon" variant="inset">
             <SidebarHeader>
                 <SidebarMenu>
                     <SidebarMenuItem>
-                        <SidebarMenuButton size="lg" asChild>
+                        <SidebarMenuButton className='mb-5 text-2xl font-medium justify-center py-2' asChild>
                             <Link href={dashboard()} prefetch>
-                                <AppLogo />
+                                <Computer className='size-5' /> InfoTech
                             </Link>
                         </SidebarMenuButton>
                     </SidebarMenuItem>

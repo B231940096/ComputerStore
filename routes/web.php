@@ -5,15 +5,24 @@ use Inertia\Inertia;
 use Laravel\Fortify\Features;
 
 Route::get('/', function () {
-    return Inertia::render('welcome', [
-        'canRegister' => Features::enabled(Features::registration()),
-    ]);
+    //redirect home to dashboard 
+    return redirect()->route('dashboard');
 })->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('dashboard', function () {
-        return Inertia::render('dashboard');
+    Route::get('/dashboard', function () {
+        return Inertia::render('dashboard'); // <-- use lowercase to match resources/js/pages/dashboard.tsx
     })->name('dashboard');
-});
-
-require __DIR__.'/settings.php';
+    Route::get('/ComputerParts',function(){
+        return Inertia::render('ComputerParts');
+    });
+     // Add your private routes here later
+     Route::get('/settings', function () {
+         return Inertia::render('settings');
+     })->name('settings');
+     Route::get('/profile', function () {
+         return Inertia::render('Profile/Edit');
+     })->name('profile.edit');
+     
+ });
+     

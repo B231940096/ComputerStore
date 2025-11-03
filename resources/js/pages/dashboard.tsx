@@ -1,3 +1,4 @@
+import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -63,57 +64,63 @@ export default function Dashboard() {
 
   ].map((item, i) => (
     <Card key={i} className="p-0 overflow-hidden shadow-lg">
-      <div className="relative w-full h-40">
+      <div className="relative w-full ">
         <img
           src={item.image}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 "></div>
       </div>
 
     </Card>
   ))}
   </div>
-
-<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-6">
+ <h1 className="col-span-2 text-3xl font-semibold mt-3">Компьютерын дэлгэц</h1>
+<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-1">
+ 
   {[
     { 
-      title: "Total Sales", 
-      value: "$24,000", 
-      color: "bg-gradient-to-r from-green-500 to-emerald-600",
-      image: "/images/sales.jpg"
+      title: "ASUS TUF Gaming VG27AQML1A 27 inch 260Hz 2K", 
+      value: "1,200,000₮", 
+      color: "",
+      image: "/monitor/4-67.webp",
+      isfreedelivery: true
     },
     { 
-      title: "Total Sales", 
-      value: "$24,000", 
-      color: "bg-gradient-to-r from-green-500 to-emerald-600",
-      image: "/images/sales.jpg"
+      title: "ASUS TUF Gaming VG27AQL3A 27 inch 180Hz 2K", 
+      value: "750'000₮", 
+      color: "",
+      image: "/monitor/1-30(1).webp",
+      isfreedelivery: true
     },
     { 
-      title: "Users", 
-      value: "1,245", 
-      color: "bg-gradient-to-r from-blue-500 to-indigo-600",
-      image: "/images/users.jpg"
+      title: "Asus Rog Strix XG27ACS 27 inch 180Hz 2K", 
+      value: "900'000₮", 
+      image: "/monitor/1-17.webp",
+      isfreedelivery: true
+
     },
     { 
-      title: "Orders", 
-      value: "320", 
-      color: "bg-gradient-to-r from-orange-500 to-red-500",
-      image: "/images/orders.jpg"
+      title: "Asus - VA24EHFR 23.8-inch, 1920x1080, 100Hz", 
+      value: "300'000₮", 
+      image: "/monitor/1-13-ezgif.com-optijpeg3.webp",
+      isfreedelivery: false
+
     },
   ].map((item, i) => (
-    <Card key={i} className="overflow-hidden shadow-lg">
-      <div className="relative w-full h-40">
+    <Card key={i} className="overflow-hidden  py-0 shadow-lg">
+      <div className="relative w-full">
         <img
           src={item.image}
           alt={item.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 "></div>
       </div>
-      <CardContent className={`${item.color} text-white p-6`}>
-        <h3 className="text-lg font-semibold">{item.title}</h3>
+      <CardContent className={`${item.color}  text-black p-6`}>
+        <h3 className="text-m font-normal">{item.title}</h3>
         <p className="text-3xl font-bold mt-2">{item.value}</p>
+        {item.isfreedelivery && <Badge variant="destructive">Хүргэлт үнэгүй</Badge>}
       </CardContent>
     </Card>
   ))}
