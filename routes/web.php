@@ -4,15 +4,12 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 
-Route::get('/', function () {
-    //redirect home to dashboard 
-    return redirect()->route('dashboard');
-})->name('home');
-
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/dashboard', function () {
+   Route::get('/dashboard', function () {
         return Inertia::render('dashboard'); // <-- use lowercase to match resources/js/pages/dashboard.tsx
     })->name('dashboard');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+ 
     Route::get('/ComputerParts',function(){
         return Inertia::render('ComputerParts');
     });

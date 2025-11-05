@@ -16,7 +16,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 const breadcrumbs: BreadcrumbItem[] = [
   {
-    title: 'Dashboard',
+    title: 'Нүүр хуудас',
     href: dashboard().url,
   },
 ];
