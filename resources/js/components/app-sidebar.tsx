@@ -11,6 +11,7 @@ import {
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import { dashboard } from '@/routes';
+import { computerparts } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
 import { BookOpen, Box, Computer, Folder, Gamepad2, Gift, Laptop, LayoutGrid, Monitor, PcCase, Server, Smartphone } from 'lucide-react';
@@ -25,7 +26,7 @@ icon: BookOpen,
   },
   {
     title: 'Суурин компьютерын эд анги',
-    href: dashboard(),
+    href: computerparts(),
     icon: LayoutGrid,
   },
   {

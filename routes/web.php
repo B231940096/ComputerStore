@@ -7,12 +7,13 @@ use Laravel\Fortify\Features;
    Route::get('/dashboard', function () {
         return Inertia::render('dashboard'); // <-- use lowercase to match resources/js/pages/dashboard.tsx
     })->name('dashboard');
+Route::get('/computerparts',function(){
+        return Inertia::render('ComputerParts');
+    }) ->name('computerparts');
 
 Route::middleware(['auth', 'verified'])->group(function () {
- 
-    Route::get('/ComputerParts',function(){
-        return Inertia::render('ComputerParts');
-    });
+
+    
      // Add your private routes here later
      Route::get('/settings', function () {
          return Inertia::render('settings');
