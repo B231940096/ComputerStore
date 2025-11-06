@@ -37,7 +37,7 @@ export default function Dashboard() {
                     <Card className="w-full h-[270px] sm:h-[270px] md:h-[270px] p-0">
                       <CardContent className="flex items-center justify-center p-0">
                         <img
-                          src={`/build/carousel/slideshow${index + 1}.webp`}
+                          src={`/banner/carousel/slideshow${index + 1}.webp`}
                           alt={`Slide ${index + 1}`}
                           className="w-full h-full object-cover rounded-xl"
                         />
@@ -53,13 +53,13 @@ export default function Dashboard() {
 
 <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-3 mt-6"> {[
    { 
-      image: "/build/brend-item1.webp"
+      image: "/banner/brend-item1.webp"
     },
     { 
-      image: "/build/brend-item2.webp"
+      image: "/banner/brend-item2.webp"
     },
     { 
-      image: "/build/brend-item3.webp"
+      image: "/banner/brend-item3.webp"
     },
 
   ].map((item, i) => (
