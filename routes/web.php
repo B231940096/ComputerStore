@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 
+
+Route::get('/', function () {
+    return redirect()->route('dashboard');
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('dashboard'); // <-- use lowercase to match resources/js/pages/dashboard.tsx
 })->name('dashboard');
