@@ -14,14 +14,5 @@ Route::get('/furniture', function () {
     return Inertia::render('Furniture');
 })->name('furniture');
 
-Route::middleware(['auth', 'verified'])->group(function () {
-
-
-    // Add your private routes here later
-    Route::get('/profile', function () {
-        return Inertia::render('Profile/Edit');
-    })->name('profile.edit');
-
-});
 
 require __DIR__ . '/settings.php';

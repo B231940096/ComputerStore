@@ -2,6 +2,7 @@ import AppLogoIcon from '@/components/app-logo-icon';
 import { dashboard } from '@/routes/index';
 import { type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
+import { Computer } from 'lucide-react';
 import { type PropsWithChildren } from 'react';
 
 interface AuthLayoutProps {
@@ -18,28 +19,47 @@ export default function AuthSplitLayout({
 
     return (
         <div className="relative grid h-dvh flex-col items-center justify-center px-8 sm:px-0 lg:max-w-none lg:grid-cols-2 lg:px-0">
-            <div className="relative hidden h-full flex-col bg-muted p-10 text-white lg:flex dark:border-r">
-                <div className="absolute inset-0 bg-zinc-900" />
-                <Link
-                    href={dashboard()}
-                    className="relative z-20 flex items-center text-lg font-medium"
-                >
-                    <AppLogoIcon className="mr-2 size-8 fill-current text-white" />
-                    {name}
-                </Link>
+            
+            {/* LEFT SIDE (Background image section) */}
+            <div className="relative hidden h-full flex-col text-white lg:flex dark:border-r overflow-hidden">
+                {/* Background image that fully covers */}
+                <img
+                    src="/loginbackground.jpg"
+                    alt="Background"
+                    className="absolute inset-0 h-full w-full object-cover"
+                />
+                
+                {/* Dark overlay for better text contrast */}
+                <div className="absolute inset-0 bg-black/60" />
+
+                {/* Top logo/name */}
+                <div className="relative z-20 p-10">
+                    <Link
+                        href={dashboard()}
+                        className="flex items-center text-lg font-medium"
+                    >
+                        <Computer className="size-7 mr-2" />
+                        {name}
+                    </Link>
+                </div>
+
+                {/* Bottom quote */}
                 {quote && (
-                    <div className="relative z-20 mt-auto">
+                    <div className="relative z-20 mt-auto p-10">
                         <blockquote className="space-y-2">
-                            <p className="text-lg">
-                                &ldquo;{quote.message}&rdquo;
+                            <p className="text-lg leading-relaxed">
+                                Гайхалтай зүйлсийг хийх цорын ганц арга нь
+                                дуртай зүйлээ хийх явдал юм.
                             </p>
                             <footer className="text-sm text-neutral-300">
-                                {quote.author}
+                                — Тэнгис
                             </footer>
                         </blockquote>
                     </div>
                 )}
             </div>
+
+            {/* RIGHT SIDE (Login form section) */}
             <div className="w-full lg:p-8">
                 <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
                     <Link
