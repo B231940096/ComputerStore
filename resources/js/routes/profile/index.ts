@@ -1,33 +1,94 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../wayfinder'
 
 /**
- * ==============================
- * PROFILE EDIT ROUTE
- * ==============================
+ * @see routes/web.php:21
+ * @route '/profile'
+ */
+export const profileEdit = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+  url: profileEdit.url(options),
+  method: 'get',
+});
+
+profileEdit.definition = {
+  methods: ['get', 'head'],
+  url: '/profile',
+} satisfies RouteDefinition<['get', 'head']>;
+
+profileEdit.url = (options?: RouteQueryOptions) => {
+  return profileEdit.definition.url + queryParams(options);
+};
+
+profileEdit.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+  url: profileEdit.url(options),
+  method: 'get',
+});
+
+profileEdit.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+  url: profileEdit.url(options),
+  method: 'head',
+});
+
+const profileEditForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+  action: profileEdit.url(options),
+  method: 'get',
+});
+
+profileEditForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+  action: profileEdit.url(options),
+  method: 'get',
+});
+
+profileEditForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+  action: profileEdit.url({
+    [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+      _method: 'HEAD',
+      ...(options?.query ?? options?.mergeQuery ?? {}),
+    },
+  }),
+  method: 'get',
+});
+
+profileEdit.form = profileEditForm;
+
+/**
  * @see \App\Http\Controllers\Settings\ProfileController::edit
  * @route '/settings/profile'
  */
 export const edit = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
   url: edit.url(options),
   method: 'get',
-})
+});
 
 edit.definition = {
   methods: ['get', 'head'],
   url: '/settings/profile',
-} satisfies RouteDefinition<['get', 'head']>
+} satisfies RouteDefinition<['get', 'head']>;
 
-edit.url = (options?: RouteQueryOptions) => edit.definition.url + queryParams(options)
+edit.url = (options?: RouteQueryOptions) => {
+  return edit.definition.url + queryParams(options);
+};
 
-edit.get = (options?: RouteQueryOptions) => ({ url: edit.url(options), method: 'get' })
-edit.head = (options?: RouteQueryOptions) => ({ url: edit.url(options), method: 'head' })
+edit.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+  url: edit.url(options),
+  method: 'get',
+});
+
+edit.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+  url: edit.url(options),
+  method: 'head',
+});
 
 const editForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
   action: edit.url(options),
   method: 'get',
-})
-editForm.get = (options?: RouteQueryOptions) => ({ action: edit.url(options), method: 'get' })
-editForm.head = (options?: RouteQueryOptions) => ({
+});
+
+editForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+  action: edit.url(options),
+  method: 'get',
+});
+
+editForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
   action: edit.url({
     [options?.mergeQuery ? 'mergeQuery' : 'query']: {
       _method: 'HEAD',
@@ -35,30 +96,31 @@ editForm.head = (options?: RouteQueryOptions) => ({
     },
   }),
   method: 'get',
-})
+});
 
-edit.form = editForm
+edit.form = editForm;
 
 /**
- * ==============================
- * PROFILE UPDATE ROUTE
- * ==============================
- * @see \App\Http\Controllers\Settings\ProfileController::update
- * @route '/settings/profile'
+ * Update
  */
 export const update = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
   url: update.url(options),
   method: 'patch',
-})
+});
 
 update.definition = {
   methods: ['patch'],
   url: '/settings/profile',
-} satisfies RouteDefinition<['patch']>
+} satisfies RouteDefinition<['patch']>;
 
-update.url = (options?: RouteQueryOptions) => update.definition.url + queryParams(options)
+update.url = (options?: RouteQueryOptions) => {
+  return update.definition.url + queryParams(options);
+};
 
-update.patch = (options?: RouteQueryOptions) => ({ url: update.url(options), method: 'patch' })
+update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+  url: update.url(options),
+  method: 'patch',
+});
 
 const updateForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
   action: update.url({
@@ -68,9 +130,9 @@ const updateForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> =>
     },
   }),
   method: 'post',
-})
+});
 
-updateForm.patch = (options?: RouteQueryOptions) => ({
+updateForm.patch = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
   action: update.url({
     [options?.mergeQuery ? 'mergeQuery' : 'query']: {
       _method: 'PATCH',
@@ -78,30 +140,31 @@ updateForm.patch = (options?: RouteQueryOptions) => ({
     },
   }),
   method: 'post',
-})
+});
 
-update.form = updateForm
+update.form = updateForm;
 
 /**
- * ==============================
- * PROFILE DESTROY ROUTE
- * ==============================
- * @see \App\Http\Controllers\Settings\ProfileController::destroy
- * @route '/settings/profile'
+ * Destroy
  */
 export const destroy = (options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
   url: destroy.url(options),
   method: 'delete',
-})
+});
 
 destroy.definition = {
   methods: ['delete'],
   url: '/settings/profile',
-} satisfies RouteDefinition<['delete']>
+} satisfies RouteDefinition<['delete']>;
 
-destroy.url = (options?: RouteQueryOptions) => destroy.definition.url + queryParams(options)
+destroy.url = (options?: RouteQueryOptions) => {
+  return destroy.definition.url + queryParams(options);
+};
 
-destroy.delete = (options?: RouteQueryOptions) => ({ url: destroy.url(options), method: 'delete' })
+destroy.delete = (options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+  url: destroy.url(options),
+  method: 'delete',
+});
 
 const destroyForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
   action: destroy.url({
@@ -111,9 +174,9 @@ const destroyForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> =
     },
   }),
   method: 'post',
-})
+});
 
-destroyForm.delete = (options?: RouteQueryOptions) => ({
+destroyForm.delete = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
   action: destroy.url({
     [options?.mergeQuery ? 'mergeQuery' : 'query']: {
       _method: 'DELETE',
@@ -121,19 +184,15 @@ destroyForm.delete = (options?: RouteQueryOptions) => ({
     },
   }),
   method: 'post',
-})
+});
 
-destroy.form = destroyForm
+destroy.form = destroyForm;
 
-/**
- * ==============================
- * EXPORT ALL PROFILE ROUTES
- * ==============================
- */
 const profile = {
-  edit,
-  update,
-  destroy,
-}
+  profileEdit: Object.assign(profileEdit, profileEdit),
+  edit: Object.assign(edit, edit),
+  update: Object.assign(update, update),
+  destroy: Object.assign(destroy, destroy),
+};
 
-export default profile
+export default profile;

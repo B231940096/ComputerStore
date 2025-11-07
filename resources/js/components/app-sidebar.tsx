@@ -17,7 +17,7 @@ import { Link } from '@inertiajs/react';
 import { BookOpen, Box, Computer, Folder, Gamepad2, Gift, Laptop, LayoutGrid, Monitor, PcCase, Server, Smartphone } from 'lucide-react';
 import AppLogo from './app-logo';
 import { route } from 'ziggy-js';
-import Furniture from '@/pages/furniture';
+import Furniture from '@/pages/Furniture';
 
 const mainNavItems: NavItem[] = [
   {
