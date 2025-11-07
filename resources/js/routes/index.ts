@@ -132,77 +132,6 @@ logout.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
         })
     
     logout.form = logoutForm
-    /**
- * @see routes/web.php:7
- * @route '/'
- */
-export const home = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
-    url: home.url(options),
-    method: 'get',
-})
-
-home.definition = {
-    methods: ["get","head"],
-    url: '/',
-} satisfies RouteDefinition<["get","head"]>
-
-/**
- * @see routes/web.php:7
- * @route '/'
- */
-home.url = (options?: RouteQueryOptions) => {
-    return home.definition.url + queryParams(options)
-}
-
-/**
- * @see routes/web.php:7
- * @route '/'
- */
-home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
-    url: home.url(options),
-    method: 'get',
-})
-/**
- * @see routes/web.php:7
- * @route '/'
- */
-home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
-    url: home.url(options),
-    method: 'head',
-})
-
-    /**
- * @see routes/web.php:7
- * @route '/'
- */
-    const homeForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-        action: home.url(options),
-        method: 'get',
-    })
-
-            /**
- * @see routes/web.php:7
- * @route '/'
- */
-        homeForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-            action: home.url(options),
-            method: 'get',
-        })
-            /**
- * @see routes/web.php:7
- * @route '/'
- */
-        homeForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-            action: home.url({
-                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
-                            _method: 'HEAD',
-                            ...(options?.query ?? options?.mergeQuery ?? {}),
-                        }
-                    }),
-            method: 'get',
-        })
-    
-    home.form = homeForm
 /**
 * @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::register
  * @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:41
@@ -423,3 +352,74 @@ computerparts.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
         })
     
     computerparts.form = computerpartsForm
+/**
+ * @see routes/web.php:13
+ * @route '/furniture'
+ */
+export const furniture = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: furniture.url(options),
+    method: 'get',
+})
+
+furniture.definition = {
+    methods: ["get","head"],
+    url: '/furniture',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:13
+ * @route '/furniture'
+ */
+furniture.url = (options?: RouteQueryOptions) => {
+    return furniture.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:13
+ * @route '/furniture'
+ */
+furniture.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: furniture.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:13
+ * @route '/furniture'
+ */
+furniture.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: furniture.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:13
+ * @route '/furniture'
+ */
+    const furnitureForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: furniture.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:13
+ * @route '/furniture'
+ */
+        furnitureForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: furniture.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:13
+ * @route '/furniture'
+ */
+        furnitureForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: furniture.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    furniture.form = furnitureForm

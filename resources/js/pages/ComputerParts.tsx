@@ -38,7 +38,7 @@ const products: Record<string, Product[]> = {
   cpu: [
     {
       title: "Intel Core i9-14900K 24 Core 32 Thread 3.2GHz",
-      value: "1,850,000₮",
+      value: "1,850,000",
       isfreedelivery: true,
       stock: 5,
       badge: "Шинэ",
@@ -46,14 +46,14 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "AMD Ryzen 9 7950X 16 Core 32 Thread 4.5GHz",
-      value: "1,650,000₮",
+      value: "1,650,000",
       isfreedelivery: true,
       stock: 8,
       image: "/banner/parts/ryzen9-7950x.png",
     },
     {
       title: "Intel Core i7-14700K 20 Core 28 Thread 3.4GHz",
-      value: "1,250,000₮",
+      value: "1,250,000",
       isfreedelivery: true,
       stock: 12,
       badge: "Хит бараа",
@@ -61,7 +61,7 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "AMD Ryzen 7 7800X3D 8 Core 16 Thread 4.2GHz",
-      value: "1,100,000₮",
+      value: "1,100,000",
       isfreedelivery: true,
       stock: 6,
       badge: "Шинэ",
@@ -69,28 +69,28 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "Intel Core i5-14600K 14 Core 20 Thread 3.5GHz",
-      value: "850,000₮",
+      value: "850,000",
       isfreedelivery: false,
       stock: 15,
       image: "/banner/parts/i5-14600k.png",
     },
     {
       title: "AMD Ryzen 5 7600X 6 Core 12 Thread 4.7GHz",
-      value: "650,000₮",
+      value: "650,000",
       isfreedelivery: false,
       stock: 20,
       image: "/banner/parts/ryzen5-7600x.png",
     },
     {
       title: "Intel Core i5-13400F 10 Core 16 Thread 2.5GHz",
-      value: "550,000₮",
+      value: "550,000",
       isfreedelivery: false,
       stock: 25,
       image: "/banner/parts/i5-13400f.png",
     },
     {
       title: "AMD Ryzen 5 5600X 6 Core 12 Thread 3.7GHz",
-      value: "450,000₮",
+      value: "450,000",
       isfreedelivery: false,
       stock: 30,
       badge: "Хямдрал",
@@ -100,7 +100,7 @@ const products: Record<string, Product[]> = {
   gpu: [
     {
       title: "NVIDIA GeForce RTX 4090 24GB GDDR6X",
-      value: "5,500,000₮",
+      value: "5,500,000",
       isfreedelivery: true,
       stock: 2,
       badge: "Шинэ",
@@ -108,14 +108,14 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "AMD Radeon RX 7900 XTX 24GB GDDR6",
-      value: "3,200,000₮",
+      value: "3,200,000",
       isfreedelivery: true,
       stock: 4,
       image: "/banner/parts/RX7900.png",
     },
     {
       title: "NVIDIA GeForce RTX 4080 16GB GDDR6X",
-      value: "3,800,000₮",
+      value: "3,800,000",
       isfreedelivery: true,
       stock: 3,
       badge: "Хит бараа",
@@ -123,28 +123,28 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "NVIDIA GeForce RTX 4070 Ti 12GB GDDR6X",
-      value: "2,400,000₮",
+      value: "2,400,000",
       isfreedelivery: true,
       stock: 7,
       image: "/banner/parts/rtx-4070ti.png",
     },
     {
       title: "AMD Radeon RX 7800 XT 16GB GDDR6",
-      value: "1,850,000₮",
+      value: "1,850,000",
       isfreedelivery: true,
       stock: 9,
       image: "/banner/parts/RX7800.png",
     },
     {
       title: "NVIDIA GeForce RTX 4060 Ti 8GB GDDR6",
-      value: "1,400,000₮",
+      value: "1,400,000",
       isfreedelivery: false,
       stock: 12,
       image: "/banner/parts/rtx-4060ti.png",
     },
     {
       title: "AMD Radeon RX 6750 XT 12GB GDDR6",
-      value: "1,100,000₮",
+      value: "1,100,000",
       isfreedelivery: false,
       stock: 15,
       badge: "Хямдрал",
@@ -152,7 +152,7 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "NVIDIA GeForce RTX 4060 8GB GDDR6",
-      value: "950,000₮",
+      value: "950,000",
       isfreedelivery: false,
       stock: 18,
       image: "/banner/parts/rtx-4060.png",
@@ -161,7 +161,7 @@ const products: Record<string, Product[]> = {
   ram: [
     {
       title: "G.SKILL Trident Z5 RGB 64GB (2x32GB) DDR5-6000",
-      value: "850,000₮",
+      value: "850,000",
       isfreedelivery: true,
       stock: 10,
       badge: "Шинэ",
@@ -169,14 +169,14 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "Corsair Dominator Platinum RGB 32GB DDR5-5600",
-      value: "520,000₮",
+      value: "520,000",
       isfreedelivery: true,
       stock: 15,
       image: "/banner/parts/platinum-32.avif",
     },
     {
       title: "Kingston Fury Beast 32GB (2x16GB) DDR5-5200",
-      value: "380,000₮",
+      value: "380,000",
       isfreedelivery: true,
       stock: 20,
       badge: "Хит бараа",
@@ -184,21 +184,21 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "Corsair Vengeance RGB 32GB DDR4-3600",
-      value: "280,000₮",
+      value: "280,000",
       isfreedelivery: false,
       stock: 25,
       image: "/banner/parts/vengeance-32.png",
     },
     {
       title: "G.SKILL Ripjaws V 16GB (2x8GB) DDR4-3200",
-      value: "150,000₮",
+      value: "150,000",
       isfreedelivery: false,
       stock: 40,
       image: "/banner/parts/ripjaws-v-16.webp",
     },
     {
       title: "Kingston Fury Beast 16GB DDR4-3200",
-      value: "120,000₮",
+      value: "120,000",
       isfreedelivery: false,
       stock: 50,
       badge: "Хямдрал",
@@ -206,14 +206,14 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "Crucial Ballistix 32GB (2x16GB) DDR4-3600",
-      value: "260,000₮",
+      value: "260,000",
       isfreedelivery: false,
       stock: 30,
       image: "/banner/parts/ballistix-32.png",
     },
     {
       title: "TeamGroup T-Force Delta RGB 16GB DDR4-3200",
-      value: "140,000₮",
+      value: "140,000",
       isfreedelivery: false,
       stock: 35,
       image: "/banner/parts/delta-16.png",
@@ -222,7 +222,7 @@ const products: Record<string, Product[]> = {
   storage: [
     {
       title: "Samsung 990 PRO 2TB NVMe SSD PCIe 4.0",
-      value: "650,000₮",
+      value: "650,000",
       isfreedelivery: true,
       stock: 12,
       badge: "Шинэ",
@@ -230,14 +230,14 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "WD Black SN850X 2TB NVMe SSD PCIe 4.0",
-      value: "580,000₮",
+      value: "580,000",
       isfreedelivery: true,
       stock: 15,
       image: "/banner/parts/sn850x-2tb.png",
     },
     {
       title: "Crucial P5 Plus 1TB NVMe SSD PCIe 4.0",
-      value: "280,000₮",
+      value: "280,000",
       isfreedelivery: true,
       stock: 25,
       badge: "Хямдрал",
@@ -245,21 +245,21 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "Kingston NV2 1TB NVMe SSD PCIe 4.0",
-      value: "220,000₮",
+      value: "220,000",
       isfreedelivery: false,
       stock: 30,
       image: "/banner/parts/kingston-1tb.png",
     },
     {
       title: "Samsung 870 EVO 1TB SATA SSD",
-      value: "180,000₮",
+      value: "180,000",
       isfreedelivery: false,
       stock: 20,
       image: "/banner/parts/samsung-870-1tb.png",
     },
     {
       title: "WD Blue 500GB SATA SSD",
-      value: "95,000₮",
+      value: "95,000",
       isfreedelivery: false,
       stock: 40,
       badge: "Хямдрал",
@@ -267,14 +267,14 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "Seagate Barracuda 2TB HDD 7200RPM",
-      value: "120,000₮",
+      value: "120,000",
       isfreedelivery: false,
       stock: 35,
       image: "/banner/parts/barracuda-2tb.png",
     },
     {
       title: "WD Black 4TB HDD 7200RPM",
-      value: "240,000₮",
+      value: "240,000",
       isfreedelivery: false,
       stock: 15,
       image: "/banner/parts/wdblack-4tb.png",
@@ -283,7 +283,7 @@ const products: Record<string, Product[]> = {
   monitor: [
     {
       title: "ASUS TUF Gaming VG27AQML1A 27 inch 260Hz 2K",
-      value: "1,200,000₮",
+      value: "1,200,000",
       isfreedelivery: true,
       stock: 5,
       badge: "Шинэ",
@@ -291,14 +291,14 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "ASUS TUF Gaming VG27AQL3A 27 inch 180Hz 2K",
-      value: "750,000₮",
+      value: "750,000",
       isfreedelivery: true,
       stock: 8,
       image: "/banner/parts/asus-tuf-vg27aqml1a.png",
     },
     {
       title: "Asus Rog Strix XG27ACS 27 inch 180Hz 2K",
-      value: "900,000₮",
+      value: "900,000",
       isfreedelivery: true,
       stock: 6,
       badge: "Хит бараа",
@@ -306,14 +306,14 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "Asus - VA24EHFR 23.8-inch, 1920x1080, 100Hz",
-      value: "300,000₮",
+      value: "300,000",
       isfreedelivery: false,
       stock: 15,
       image: "/banner/parts/asus-va24ehfr.webp",
     },
     {
       title: "Samsung Odyssey G7 32 inch 240Hz 2K Curved",
-      value: "1,450,000₮",
+      value: "1,450,000",
       isfreedelivery: true,
       stock: 4,
       badge: "Шинэ",
@@ -321,21 +321,21 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "LG UltraGear 27 inch 144Hz 1080p IPS",
-      value: "550,000₮",
+      value: "550,000",
       isfreedelivery: false,
       stock: 12,
       image: "/banner/parts/lg-ultragear.png",
     },
     {
       title: "Dell S2721DGF 27 inch 165Hz 2K IPS",
-      value: "780,000₮",
+      value: "780,000",
       isfreedelivery: true,
       stock: 7,
       image: "/banner/parts/dell-s2721dgf.png",
     },
     {
       title: "AOC 24G2 24 inch 144Hz 1080p IPS",
-      value: "380,000₮",
+      value: "380,000",
       isfreedelivery: false,
       stock: 20,
       badge: "Хямдрал",
@@ -345,7 +345,7 @@ const products: Record<string, Product[]> = {
   keyboard: [
     {
       title: "Corsair K100 RGB Mechanical Gaming Keyboard",
-      value: "450,000₮",
+      value: "450,000",
       isfreedelivery: true,
       stock: 8,
       badge: "Шинэ",
@@ -353,14 +353,14 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "Logitech G915 TKL Wireless Mechanical",
-      value: "550,000₮",
+      value: "550,000",
       isfreedelivery: true,
       stock: 6,
       image: "/banner/parts/logitech-g915.png",
     },
     {
       title: "Razer BlackWidow V3 Pro Wireless",
-      value: "480,000₮",
+      value: "480,000",
       isfreedelivery: true,
       stock: 10,
       badge: "Хит бараа",
@@ -368,21 +368,21 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "SteelSeries Apex Pro TKL Mechanical",
-      value: "420,000₮",
+      value: "420,000",
       isfreedelivery: false,
       stock: 12,
       image: "/banner/parts/steelseries-apex-pro.png",
     },
     {
       title: "HyperX Alloy Origins Core RGB Mechanical",
-      value: "220,000₮",
+      value: "220,000",
       isfreedelivery: false,
       stock: 18,
       image: "/banner/parts/hyperx-alloy-origins.webp",
     },
     {
       title: "Keychron K8 Wireless Mechanical",
-      value: "280,000₮",
+      value: "280,000",
       isfreedelivery: false,
       stock: 15,
       badge: "Хямдрал",
@@ -390,14 +390,14 @@ const products: Record<string, Product[]> = {
     },
     {
       title: "Ducky One 3 TKL Mechanical RGB",
-      value: "320,000₮",
+      value: "320,000",
       isfreedelivery: false,
       stock: 14,
       image: "/banner/parts/duckyone-3.png",
     },
     {
       title: "ASUS ROG Strix Scope RX TKL Wireless",
-      value: "380,000₮",
+      value: "380,000",
       isfreedelivery: false,
       stock: 9,
       image: "/banner/parts/asus-rog-strix-scope.png",
@@ -417,9 +417,9 @@ export default function Computerparts() {
 
   return (
     <AppLayout breadcrumbs={breadcrumbs}>
-      <Tabs defaultValue="cpu" className="w-full">
+      <Tabs value={active} onValueChange={setActive} defaultValue="cpu" className="w-full">
         {/* ===== Tabs Header (Category Buttons) ===== */}
-        <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 gap-2 bg-transparent">
+        <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 gap-2 bg-transparent px-8">
           {categories.map((btn) => (
             <TabsTrigger
               key={btn.id}
@@ -438,7 +438,7 @@ export default function Computerparts() {
         {/* ===== Tabs Content (Products per Category) ===== */}
         {Object.entries(products).map(([key, items]) => (
           <TabsContent key={key} value={key} className="mt-20">
-            <div className="mb-4 flex items-center justify-between">
+            <div className="mb-4 flex items-center justify-between px-8">
               <div>
                 <h2 className="text-white text-lg font-semibold">
                   {categories.find((c) => c.id === key)?.label}
@@ -462,7 +462,7 @@ export default function Computerparts() {
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 px-8">
               {items.map((product, index) => (
                 <Card
                   key={index}
