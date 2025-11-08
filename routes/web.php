@@ -12,6 +12,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('dashboard'); // <-- use lowercase to match resources/js/pages/dashboard.tsx
 })->name('dashboard');
+Route::get('/home', function () {
+    return redirect()->route('dashboard');
+})->name('home');
 Route::get('/computerparts', function () {
     return Inertia::render('ComputerParts');
 })->name('computerparts');
