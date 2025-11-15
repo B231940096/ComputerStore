@@ -1,6 +1,5 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
 import AppLayout from '@/layouts/app-layout';
 import { furniture } from '@/routes/index';
 import { type BreadcrumbItem } from '@/types';
@@ -15,7 +14,6 @@ import {
     TabsTrigger,
 } from "@/components/ui/tabs";
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { table } from 'console';
 
 interface Product {
     title: string;

@@ -10,7 +10,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard, furniture } from '@/routes';
+import { dashboard, furniture, preBuiltPC } from '@/routes';
 import { computerparts } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
@@ -42,7 +42,7 @@ icon: BookOpen,
   },
   {
     title: 'Бэлэн компьютер',
-    href: dashboard(),
+    href: preBuiltPC(),
     icon: PcCase,
   },
   {

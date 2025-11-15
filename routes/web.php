@@ -21,6 +21,11 @@ Route::get('/computerparts', function () {
 Route::get('/furniture', function () {
     return Inertia::render('Furniture');
 })->name('furniture');
+Route::get('/pre-built-pc', function () {
+    return Inertia::render('PreBuiltPC');
+})->name('pre-built-pc');
+
+
 
 
 require __DIR__ . '/settings.php';
