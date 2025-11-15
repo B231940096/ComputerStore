@@ -1,7 +1,7 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import AppLayout from '@/layouts/app-layout';
-import { preBuiltPC } from '@/routes/index';
+import { preBuiltPc } from '@/routes/index';
 import { type BreadcrumbItem } from '@/types';
 
 interface Product {
@@ -107,7 +107,7 @@ const products: Product[] = [
 const breadcrumbs: BreadcrumbItem[] = [
     {
         title: 'Бэлэн компьютерууд',
-        href: preBuiltPC().url,
+        href: preBuiltPc().url,
     },
 ];
 

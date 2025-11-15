@@ -10,14 +10,11 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard, furniture, preBuiltPC } from '@/routes';
+import { dashboard, furniture, preBuiltPc } from '@/routes';
 import { computerparts } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
 import { BookOpen, Box, Computer, Folder, Gamepad2, Gift, Laptop, LayoutGrid, Monitor, PcCase, Server, Smartphone } from 'lucide-react';
-import AppLogo from './app-logo';
-import { route } from 'ziggy-js';
-import Furniture from '@/pages/Furniture';
 
 const mainNavItems: NavItem[] = [
   {
@@ -42,7 +39,7 @@ icon: BookOpen,
   },
   {
     title: 'Бэлэн компьютер',
-    href: preBuiltPC(),
+    href: preBuiltPc(),
     icon: PcCase,
   },
   {

@@ -1,12 +1,9 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
 import AppLayout from '@/layouts/app-layout';
 import { computerparts } from '@/routes/index';
 import { type BreadcrumbItem } from '@/types';
-import { Head } from '@inertiajs/react';
-import Autoplay from "embla-carousel-autoplay";
-import { Cpu, Monitor, Keyboard, HardDrive, MemoryStick, Microchip } from "lucide-react";
+import { Cpu, Monitor, Keyboard, HardDrive, MemoryStick, Microchip, SquareSquare, Power, Fan, EqualApproximately, PcCase } from "lucide-react";
 import { useState } from "react";
 import {
   Tabs,
@@ -27,11 +24,16 @@ interface Product {
 
 const categories = [
   { id: "cpu", label: "Процессор", icon: <Cpu className="w-5 h-5" /> },
-  { id: "gpu", label: "Видео карт", icon: <Microchip className="w-5 h-5" /> },
-  { id: "ram", label: "RAM санах ой", icon: <MemoryStick className="w-5 h-5" /> },
+  { id: "gpu", label: "График карт", icon: <Microchip className="w-5 h-5" /> },
+  { id: "ram", label: "Шуурхай санах ой / RAM", icon: <MemoryStick className="w-5 h-5" /> },
   { id: "storage", label: "Хадгалах төхөөрөмж", icon: <HardDrive className="w-5 h-5" /> },
-  { id: "monitor", label: "Дэлгэц", icon: <Monitor className="w-5 h-5" /> },
-  { id: "keyboard", label: "Гар", icon: <Keyboard className="w-5 h-5" /> },
+  { id: "motherboard", label: "Эх хавтан", icon: <SquareSquare className="w-5 h-5" /> },
+  { id: "power_supply", label: "Тэжээлийн блок", icon: <Power className="w-5 h-5" /> },
+  { id: "fan", label: "Сэнс / Дагах хэрэгсэл", icon: <Fan className="w-5 h-5" /> },
+  { id: "cpu_cooler", label: "Хөргүүр /CPU/", icon: <EqualApproximately className="w-5 h-5" /> },
+  { id: "case", label: "Кэйс", icon: <PcCase className="w-5 h-5" /> },
+  // { id: "monitor", label: "Дэлгэц", icon: <Monitor className="w-5 h-5" /> },
+  // { id: "keyboard", label: "Гар", icon: <Keyboard className="w-5 h-5" /> },
 ]
 
 const products: Record<string, Product[]> = {
@@ -280,129 +282,211 @@ const products: Record<string, Product[]> = {
       image: "/banner/parts/wdblack-4tb.png",
     },
   ],
-  monitor: [
+  motherboard: [
     {
-      title: "ASUS TUF Gaming VG27AQML1A 27 inch 260Hz 2K",
-      value: "1,200,000",
-      isfreedelivery: true,
-      stock: 5,
-      badge: "Шинэ",
-      image: "/banner/parts/asus-tuf-vg27aqml1a.png",
-    },
-    {
-      title: "ASUS TUF Gaming VG27AQL3A 27 inch 180Hz 2K",
-      value: "750,000",
-      isfreedelivery: true,
-      stock: 8,
-      image: "/banner/parts/asus-tuf-vg27aqml1a.png",
-    },
-    {
-      title: "Asus Rog Strix XG27ACS 27 inch 180Hz 2K",
-      value: "900,000",
-      isfreedelivery: true,
-      stock: 6,
-      badge: "Хит бараа",
-      image: "/banner/parts/asus-strix-xg27acs.png",
-    },
-    {
-      title: "Asus - VA24EHFR 23.8-inch, 1920x1080, 100Hz",
-      value: "300,000",
-      isfreedelivery: false,
-      stock: 15,
-      image: "/banner/parts/asus-va24ehfr.webp",
-    },
-    {
-      title: "Samsung Odyssey G7 32 inch 240Hz 2K Curved",
-      value: "1,450,000",
-      isfreedelivery: true,
-      stock: 4,
-      badge: "Шинэ",
-      image: "/banner/parts/samsung-g7.webp",
-    },
-    {
-      title: "LG UltraGear 27 inch 144Hz 1080p IPS",
-      value: "550,000",
-      isfreedelivery: false,
-      stock: 12,
-      image: "/banner/parts/lg-ultragear.png",
-    },
-    {
-      title: "Dell S2721DGF 27 inch 165Hz 2K IPS",
-      value: "780,000",
-      isfreedelivery: true,
-      stock: 7,
-      image: "/banner/parts/dell-s2721dgf.png",
-    },
-    {
-      title: "AOC 24G2 24 inch 144Hz 1080p IPS",
-      value: "380,000",
-      isfreedelivery: false,
-      stock: 20,
-      badge: "Хямдрал",
-      image: "/banner/parts/AOC_24G2.png",
-    },
-  ],
-  keyboard: [
-    {
-      title: "Corsair K100 RGB Mechanical Gaming Keyboard",
-      value: "450,000",
-      isfreedelivery: true,
-      stock: 8,
-      badge: "Шинэ",
-      image: "/banner/parts/corsair-k100.avif",
-    },
-    {
-      title: "Logitech G915 TKL Wireless Mechanical",
-      value: "550,000",
-      isfreedelivery: true,
-      stock: 6,
-      image: "/banner/parts/logitech-g915.png",
-    },
-    {
-      title: "Razer BlackWidow V3 Pro Wireless",
-      value: "480,000",
+      title: "Asus - Prime B760M-K DDR5",
+      value: "400,000",
       isfreedelivery: true,
       stock: 10,
-      badge: "Хит бараа",
-      image: "/banner/parts/razer-blackwidow.png",
+      badge: "Шинэ",
+      image: "/banner/parts/motherboards/mb-1.png",
     },
     {
-      title: "SteelSeries Apex Pro TKL Mechanical",
-      value: "420,000",
+      title: "Asrock - B760M-H2/M.2",
+      value: "300,000",
+      isfreedelivery: true,
+      stock: 15,
+      badge: "Шинэ",
+      image: "/banner/parts/motherboards/mb-2.png",
+    },
+    {
+      title: "Asus - Prime Z790-P DDR5 Nobox",
+      value: "600,000",
+      isfreedelivery: true,
+      stock: 25,
+      badge: "Хямдрал",
+      image: "/banner/parts/motherboards/mb-3.png",
+    },
+    {
+      title: "Asus - PRIME X870-P",
+      value: "1,000,000",
       isfreedelivery: false,
-      stock: 12,
-      image: "/banner/parts/steelseries-apex-pro.png",
+      stock: 30,
+      badge: "Шинэ",
+      image: "/banner/parts/motherboards/mb-4.png",
     },
     {
-      title: "HyperX Alloy Origins Core RGB Mechanical",
-      value: "220,000",
+      title: "MSI - B760M GAMING Plus WIFI",
+      value: "600,000",
       isfreedelivery: false,
-      stock: 18,
-      image: "/banner/parts/hyperx-alloy-origins.webp",
+      stock: 20,
+      badge: "Шинэ",
+      image: "/banner/parts/motherboards/mb-5.png",
     },
     {
-      title: "Keychron K8 Wireless Mechanical",
-      value: "280,000",
+      title: "MSI - Pro B650M-A D5 / AMD /",
+      value: "550,000",
+      isfreedelivery: false,
+      stock: 40,
+      badge: "Шинэ",
+      image: "/banner/parts/motherboards/mb-6.png",
+    },
+    {
+      title: "Asus - ProArt X870E-CREATOR WIFI",
+      value: "1,900,000",
+      isfreedelivery: false,
+      stock: 35,
+      badge: "Шинэ",
+      image: "/banner/parts/motherboards/mb-7.png",
+    },
+    {
+      title: "Asrock - X870E Taichi Wi-Fi /AMD/",
+      value: "2,000,000",
       isfreedelivery: false,
       stock: 15,
-      badge: "Хямдрал",
-      image: "/banner/parts/keychron-kk8.png",
+      badge: "Шинэ",
+      image: "/banner/parts/motherboards/mb-8.png",
     },
     {
-      title: "Ducky One 3 TKL Mechanical RGB",
-      value: "320,000",
+      title: "Gigabyte - X870 Aorus Elite WiFi 7 /AMD/",
+      value: "1,200,000",
       isfreedelivery: false,
-      stock: 14,
-      image: "/banner/parts/duckyone-3.png",
+      stock: 15,
+      badge: "Шинэ",
+      image: "/banner/parts/motherboards/mb-9.png",
     },
     {
-      title: "ASUS ROG Strix Scope RX TKL Wireless",
-      value: "380,000",
+      title: "Asus - Rog Strix X870E-E Gaming Wifi",
+      value: "2,000,000",
       isfreedelivery: false,
-      stock: 9,
-      image: "/banner/parts/asus-rog-strix-scope.png",
+      stock: 15,
+      badge: "Шинэ",
+      image: "/banner/parts/motherboards/mb-10.png",
     },
   ],
+  // monitor: [
+  //   {
+  //     title: "ASUS TUF Gaming VG27AQML1A 27 inch 260Hz 2K",
+  //     value: "1,200,000",
+  //     isfreedelivery: true,
+  //     stock: 5,
+  //     badge: "Шинэ",
+  //     image: "/banner/parts/asus-tuf-vg27aqml1a.png",
+  //   },
+  //   {
+  //     title: "ASUS TUF Gaming VG27AQL3A 27 inch 180Hz 2K",
+  //     value: "750,000",
+  //     isfreedelivery: true,
+  //     stock: 8,
+  //     image: "/banner/parts/asus-tuf-vg27aqml1a.png",
+  //   },
+  //   {
+  //     title: "Asus Rog Strix XG27ACS 27 inch 180Hz 2K",
+  //     value: "900,000",
+  //     isfreedelivery: true,
+  //     stock: 6,
+  //     badge: "Хит бараа",
+  //     image: "/banner/parts/asus-strix-xg27acs.png",
+  //   },
+  //   {
+  //     title: "Asus - VA24EHFR 23.8-inch, 1920x1080, 100Hz",
+  //     value: "300,000",
+  //     isfreedelivery: false,
+  //     stock: 15,
+  //     image: "/banner/parts/asus-va24ehfr.webp",
+  //   },
+  //   {
+  //     title: "Samsung Odyssey G7 32 inch 240Hz 2K Curved",
+  //     value: "1,450,000",
+  //     isfreedelivery: true,
+  //     stock: 4,
+  //     badge: "Шинэ",
+  //     image: "/banner/parts/samsung-g7.webp",
+  //   },
+  //   {
+  //     title: "LG UltraGear 27 inch 144Hz 1080p IPS",
+  //     value: "550,000",
+  //     isfreedelivery: false,
+  //     stock: 12,
+  //     image: "/banner/parts/lg-ultragear.png",
+  //   },
+  //   {
+  //     title: "Dell S2721DGF 27 inch 165Hz 2K IPS",
+  //     value: "780,000",
+  //     isfreedelivery: true,
+  //     stock: 7,
+  //     image: "/banner/parts/dell-s2721dgf.png",
+  //   },
+  //   {
+  //     title: "AOC 24G2 24 inch 144Hz 1080p IPS",
+  //     value: "380,000",
+  //     isfreedelivery: false,
+  //     stock: 20,
+  //     badge: "Хямдрал",
+  //     image: "/banner/parts/AOC_24G2.png",
+  //   },
+  // ],
+  // keyboard: [
+  //   {
+  //     title: "Corsair K100 RGB Mechanical Gaming Keyboard",
+  //     value: "450,000",
+  //     isfreedelivery: true,
+  //     stock: 8,
+  //     badge: "Шинэ",
+  //     image: "/banner/parts/corsair-k100.avif",
+  //   },
+  //   {
+  //     title: "Logitech G915 TKL Wireless Mechanical",
+  //     value: "550,000",
+  //     isfreedelivery: true,
+  //     stock: 6,
+  //     image: "/banner/parts/logitech-g915.png",
+  //   },
+  //   {
+  //     title: "Razer BlackWidow V3 Pro Wireless",
+  //     value: "480,000",
+  //     isfreedelivery: true,
+  //     stock: 10,
+  //     badge: "Хит бараа",
+  //     image: "/banner/parts/razer-blackwidow.png",
+  //   },
+  //   {
+  //     title: "SteelSeries Apex Pro TKL Mechanical",
+  //     value: "420,000",
+  //     isfreedelivery: false,
+  //     stock: 12,
+  //     image: "/banner/parts/steelseries-apex-pro.png",
+  //   },
+  //   {
+  //     title: "HyperX Alloy Origins Core RGB Mechanical",
+  //     value: "220,000",
+  //     isfreedelivery: false,
+  //     stock: 18,
+  //     image: "/banner/parts/hyperx-alloy-origins.webp",
+  //   },
+  //   {
+  //     title: "Keychron K8 Wireless Mechanical",
+  //     value: "280,000",
+  //     isfreedelivery: false,
+  //     stock: 15,
+  //     badge: "Хямдрал",
+  //     image: "/banner/parts/keychron-kk8.png",
+  //   },
+  //   {
+  //     title: "Ducky One 3 TKL Mechanical RGB",
+  //     value: "320,000",
+  //     isfreedelivery: false,
+  //     stock: 14,
+  //     image: "/banner/parts/duckyone-3.png",
+  //   },
+  //   {
+  //     title: "ASUS ROG Strix Scope RX TKL Wireless",
+  //     value: "380,000",
+  //     isfreedelivery: false,
+  //     stock: 9,
+  //     image: "/banner/parts/asus-rog-strix-scope.png",
+  //   },
+  // ],
 };
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -419,21 +503,32 @@ export default function Computerparts() {
     <AppLayout breadcrumbs={breadcrumbs}>
       <Tabs value={active} onValueChange={setActive} defaultValue="cpu" className="w-full">
         {/* ===== Tabs Header (Category Buttons) ===== */}
-        <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 gap-2 bg-transparent px-8">
+        <TabsList
+          className="
+    flex gap-3 overflow-x-auto whitespace-nowrap scrollbar-none
+    px-4 py-2 bg-transparent
+  "
+        >
           {categories.map((btn) => (
             <TabsTrigger
               key={btn.id}
               value={btn.id}
-              className="flex flex-col gap-0.5 py-2 h-20 justify-center items-center 
-              bg-sidebar text-slate-300 border border-darkblue-900 
-              data-[state=active]:bg-white data-[state=active]:text-black 
-              hover:bg-[#363234] transition-all"
+              className="
+        flex items-center gap-2 px-4 py-2
+        rounded-lg border border-gray-800
+        bg-sidebar text-gray-300
+        whitespace-nowrap
+        data-[state=active]:bg-white data-[state=active]:text-black
+        hover:bg-[#363234]
+        transition-all
+      "
             >
               {btn.icon}
-              <span className="text-sm mt-2">{btn.label}</span>
+              <span className="text-sm">{btn.label}</span>
             </TabsTrigger>
           ))}
         </TabsList>
+
 
         {/* ===== Tabs Content (Products per Category) ===== */}
         {Object.entries(products).map(([key, items]) => (
