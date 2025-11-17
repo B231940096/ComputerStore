@@ -10,7 +10,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard, furniture, preBuiltPc } from '@/routes';
+import { dashboard, furniture, peripherals, preBuiltPc } from '@/routes';
 import { computerparts } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
@@ -29,7 +29,7 @@ icon: BookOpen,
   },
   {
     title: 'Компьютерын хэрэгсэл',
-    href: dashboard(),
+    href: peripherals(),
     icon: Computer,
   },
   {

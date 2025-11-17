@@ -495,7 +495,7 @@ furniture.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     furniture.form = furnitureForm
 /**
- * @see routes/web.php:24
+ * @see routes/web.php:27
  * @route '/pre-built-pc'
  */
 export const preBuiltPc = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -509,7 +509,7 @@ preBuiltPc.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:24
+ * @see routes/web.php:27
  * @route '/pre-built-pc'
  */
 preBuiltPc.url = (options?: RouteQueryOptions) => {
@@ -517,7 +517,7 @@ preBuiltPc.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:24
+ * @see routes/web.php:27
  * @route '/pre-built-pc'
  */
 preBuiltPc.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -525,7 +525,7 @@ preBuiltPc.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:24
+ * @see routes/web.php:27
  * @route '/pre-built-pc'
  */
 preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -534,7 +534,7 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:24
+ * @see routes/web.php:27
  * @route '/pre-built-pc'
  */
     const preBuiltPcForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -543,7 +543,7 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:24
+ * @see routes/web.php:27
  * @route '/pre-built-pc'
  */
         preBuiltPcForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -551,7 +551,7 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:24
+ * @see routes/web.php:27
  * @route '/pre-built-pc'
  */
         preBuiltPcForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -565,3 +565,74 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
     
     preBuiltPc.form = preBuiltPcForm
+/**
+ * @see routes/web.php:30
+ * @route '/peripherals'
+ */
+export const peripherals = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: peripherals.url(options),
+    method: 'get',
+})
+
+peripherals.definition = {
+    methods: ["get","head"],
+    url: '/peripherals',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:30
+ * @route '/peripherals'
+ */
+peripherals.url = (options?: RouteQueryOptions) => {
+    return peripherals.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:30
+ * @route '/peripherals'
+ */
+peripherals.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: peripherals.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:30
+ * @route '/peripherals'
+ */
+peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: peripherals.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:30
+ * @route '/peripherals'
+ */
+    const peripheralsForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: peripherals.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:30
+ * @route '/peripherals'
+ */
+        peripheralsForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: peripherals.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:30
+ * @route '/peripherals'
+ */
+        peripheralsForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: peripherals.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    peripherals.form = peripheralsForm

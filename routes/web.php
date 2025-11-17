@@ -24,7 +24,12 @@ Route::get('/furniture', function () {
 Route::get('/pre-built-pc', function () {
     return Inertia::render('PreBuiltPC');
 })->name('pre-built-pc');
-
+Route::get('/pre-built-pc', function () {
+    return Inertia::render('PreBuiltPC');
+})->name('pre-built-pc');
+Route::get('/peripherals', function () {
+    return Inertia::render('Peripherals');
+})->name('peripherals');
 
 
 
