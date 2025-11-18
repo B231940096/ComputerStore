@@ -636,3 +636,358 @@ peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
     
     peripherals.form = peripheralsForm
+/**
+ * @see routes/web.php:33
+ * @route '/console'
+ */
+export const console = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: console.url(options),
+    method: 'get',
+})
+
+console.definition = {
+    methods: ["get","head"],
+    url: '/console',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:33
+ * @route '/console'
+ */
+console.url = (options?: RouteQueryOptions) => {
+    return console.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:33
+ * @route '/console'
+ */
+console.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: console.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:33
+ * @route '/console'
+ */
+console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: console.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:33
+ * @route '/console'
+ */
+    const consoleForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: console.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:33
+ * @route '/console'
+ */
+        consoleForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: console.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:33
+ * @route '/console'
+ */
+        consoleForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: console.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    console.form = consoleForm
+/**
+ * @see routes/web.php:36
+ * @route '/laptop'
+ */
+export const laptop = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: laptop.url(options),
+    method: 'get',
+})
+
+laptop.definition = {
+    methods: ["get","head"],
+    url: '/laptop',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:36
+ * @route '/laptop'
+ */
+laptop.url = (options?: RouteQueryOptions) => {
+    return laptop.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:36
+ * @route '/laptop'
+ */
+laptop.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: laptop.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:36
+ * @route '/laptop'
+ */
+laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: laptop.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:36
+ * @route '/laptop'
+ */
+    const laptopForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: laptop.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:36
+ * @route '/laptop'
+ */
+        laptopForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: laptop.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:36
+ * @route '/laptop'
+ */
+        laptopForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: laptop.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    laptop.form = laptopForm
+/**
+ * @see routes/web.php:39
+ * @route '/phone'
+ */
+export const phone = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: phone.url(options),
+    method: 'get',
+})
+
+phone.definition = {
+    methods: ["get","head"],
+    url: '/phone',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:39
+ * @route '/phone'
+ */
+phone.url = (options?: RouteQueryOptions) => {
+    return phone.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:39
+ * @route '/phone'
+ */
+phone.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: phone.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:39
+ * @route '/phone'
+ */
+phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: phone.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:39
+ * @route '/phone'
+ */
+    const phoneForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: phone.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:39
+ * @route '/phone'
+ */
+        phoneForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: phone.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:39
+ * @route '/phone'
+ */
+        phoneForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: phone.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    phone.form = phoneForm
+/**
+ * @see routes/web.php:42
+ * @route '/networkdevice'
+ */
+export const networkdevice = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: networkdevice.url(options),
+    method: 'get',
+})
+
+networkdevice.definition = {
+    methods: ["get","head"],
+    url: '/networkdevice',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:42
+ * @route '/networkdevice'
+ */
+networkdevice.url = (options?: RouteQueryOptions) => {
+    return networkdevice.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:42
+ * @route '/networkdevice'
+ */
+networkdevice.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: networkdevice.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:42
+ * @route '/networkdevice'
+ */
+networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: networkdevice.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:42
+ * @route '/networkdevice'
+ */
+    const networkdeviceForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: networkdevice.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:42
+ * @route '/networkdevice'
+ */
+        networkdeviceForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: networkdevice.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:42
+ * @route '/networkdevice'
+ */
+        networkdeviceForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: networkdevice.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    networkdevice.form = networkdeviceForm
+/**
+ * @see routes/web.php:45
+ * @route '/figure'
+ */
+export const figure = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: figure.url(options),
+    method: 'get',
+})
+
+figure.definition = {
+    methods: ["get","head"],
+    url: '/figure',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:45
+ * @route '/figure'
+ */
+figure.url = (options?: RouteQueryOptions) => {
+    return figure.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:45
+ * @route '/figure'
+ */
+figure.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: figure.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:45
+ * @route '/figure'
+ */
+figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: figure.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:45
+ * @route '/figure'
+ */
+    const figureForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: figure.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:45
+ * @route '/figure'
+ */
+        figureForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: figure.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:45
+ * @route '/figure'
+ */
+        figureForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: figure.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    figure.form = figureForm

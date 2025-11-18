@@ -30,7 +30,20 @@ Route::get('/pre-built-pc', function () {
 Route::get('/peripherals', function () {
     return Inertia::render('Peripherals');
 })->name('peripherals');
-
-
+Route::get('/console', function () {
+    return Inertia::render('Console');
+})->name('console');
+Route::get('/laptop', function () {
+    return Inertia::render('Laptop');
+})->name('laptop');
+Route::get('/phone', function () {
+    return Inertia::render('Phone');
+})->name('phone');
+Route::get('/networkdevice', function () {
+    return Inertia::render('NetworkDevice');
+})->name('networkdevice');
+Route::get('/figure', function () {
+    return Inertia::render('Figure');
+})->name('figure');
 
 require __DIR__ . '/settings.php';

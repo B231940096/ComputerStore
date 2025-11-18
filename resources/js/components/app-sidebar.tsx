@@ -10,7 +10,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard, furniture, peripherals, preBuiltPc } from '@/routes';
+import { dashboard, furniture, peripherals, preBuiltPc, console, laptop, phone, networkdevice, figure } from '@/routes';
 import { computerparts } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
@@ -44,27 +44,27 @@ icon: BookOpen,
   },
   {
     title: 'Консоль',
-    href: dashboard(),
+    href: console(),
     icon: Gamepad2,
   },
   {
     title: 'Зөөврийн компьютер',
-    href: dashboard(),
+    href: laptop(),
     icon: Laptop,
   },
   {
     title: 'Гар утас, Таблет',
-    href: dashboard(),
+    href: phone(),
     icon: Smartphone,
   },
   {
     title: 'Сүлжээний төхөөрөмж',
-    href: dashboard(),
+    href: networkdevice(),
     icon: Server,
   },
   {
     title: 'Фигур / Сувинер',
-    href: dashboard(),
+    href: figure(),
     icon: Gift,
   },
 ];
