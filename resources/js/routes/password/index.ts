@@ -445,4 +445,9 @@ const password = {
     request: Object.assign(request, request),
 reset: Object.assign(reset, reset),
 email: Object.assign(email, email),
-update: Object.assign(update, upd
+update: Object.assign(update, update),
+confirm: Object.assign(confirm, confirmD7e05f),
+confirmation: Object.assign(confirmation, confirmation),
+}
+
+export default password

@@ -825,7 +825,7 @@ export default function Computerparts() {
               {items.map((product, index) => (
                 <Card
                   key={index}
-                  className="border border-gray-800 bg-sidebar rounded-xl overflow-hidden hover:bg-[#363234] transition-all"
+                  className="border border-gray-800 bg-sidebar rounded-xl overflow-hidden hover:bg-[#cccccc] transition-all"
                 >
                   {/* Image */}
                   {product.image && (
@@ -833,7 +833,7 @@ export default function Computerparts() {
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full h-full object-center"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   )}
