@@ -14,28 +14,25 @@ import { REGEXP_ONLY_DIGITS } from 'input-otp';
 import { useMemo, useState } from 'react';
 
 export default function TwoFactorChallenge() {
-    const [showRecoveryInput, setShowRecoveryInput] = useState<boolean>(false);
+    const [showRecoveryInput, setShowRecoveryInput] =
+        useState<boolean>(false);
     const [code, setCode] = useState<string>('');
 
-    const authConfigContent = useMemo<{
-        title: string;
-        description: string;
-        toggleText: string;
-    }>(() => {
+    const authConfigContent = useMemo(() => {
         if (showRecoveryInput) {
             return {
-                title: 'Recovery Code',
+                title: 'Сэргээх код',
                 description:
-                    'Please confirm access to your account by entering one of your emergency recovery codes.',
-                toggleText: 'login using an authentication code',
+                    'Өөрийн нөөц сэргээх кодуудаас аль нэгийг оруулж нэвтрэх эрхээ баталгаажуулна уу.',
+                toggleText: 'баталгаажуулах кодоор нэвтрэх',
             };
         }
 
         return {
-            title: 'Authentication Code',
+            title: 'Баталгаажуулах код',
             description:
-                'Enter the authentication code provided by your authenticator application.',
-            toggleText: 'login using a recovery code',
+                'Authenticator апп-аас авсан баталгаажуулах кодыг оруулна уу.',
+            toggleText: 'сэргээх кодоор нэвтрэх',
         };
     }, [showRecoveryInput]);
 
@@ -50,7 +47,7 @@ export default function TwoFactorChallenge() {
             title={authConfigContent.title}
             description={authConfigContent.description}
         >
-            <Head title="Two-Factor Authentication" />
+            <Head title="Хоёр шатлалт баталгаажуулалт" />
 
             <div className="space-y-6">
                 <Form
@@ -66,7 +63,7 @@ export default function TwoFactorChallenge() {
                                     <Input
                                         name="recovery_code"
                                         type="text"
-                                        placeholder="Enter recovery code"
+                                        placeholder="Сэргээх код оруулна уу"
                                         autoFocus={showRecoveryInput}
                                         required
                                     />
@@ -76,28 +73,26 @@ export default function TwoFactorChallenge() {
                                 </>
                             ) : (
                                 <div className="flex flex-col items-center justify-center space-y-3 text-center">
-                                    <div className="flex w-full items-center justify-center">
-                                        <InputOTP
-                                            name="code"
-                                            maxLength={OTP_MAX_LENGTH}
-                                            value={code}
-                                            onChange={(value) => setCode(value)}
-                                            disabled={processing}
-                                            pattern={REGEXP_ONLY_DIGITS}
-                                        >
-                                            <InputOTPGroup>
-                                                {Array.from(
-                                                    { length: OTP_MAX_LENGTH },
-                                                    (_, index) => (
-                                                        <InputOTPSlot
-                                                            key={index}
-                                                            index={index}
-                                                        />
-                                                    ),
-                                                )}
-                                            </InputOTPGroup>
-                                        </InputOTP>
-                                    </div>
+                                    <InputOTP
+                                        name="code"
+                                        maxLength={OTP_MAX_LENGTH}
+                                        value={code}
+                                        onChange={(value) => setCode(value)}
+                                        disabled={processing}
+                                        pattern={REGEXP_ONLY_DIGITS}
+                                    >
+                                        <InputOTPGroup>
+                                            {Array.from(
+                                                { length: OTP_MAX_LENGTH },
+                                                (_, index) => (
+                                                    <InputOTPSlot
+                                                        key={index}
+                                                        index={index}
+                                                    />
+                                                ),
+                                            )}
+                                        </InputOTPGroup>
+                                    </InputOTP>
                                     <InputError message={errors.code} />
                                 </div>
                             )}
@@ -107,14 +102,14 @@ export default function TwoFactorChallenge() {
                                 className="w-full"
                                 disabled={processing}
                             >
-                                Continue
+                                Үргэлжлүүлэх
                             </Button>
 
                             <div className="text-center text-sm text-muted-foreground">
-                                <span>or you can </span>
+                                <span>эсвэл </span>
                                 <button
                                     type="button"
-                                    className="cursor-pointer text-foreground underline decoration-neutral-300 underline-offset-4 transition-colors duration-300 ease-out hover:decoration-current! dark:decoration-neutral-500"
+                                    className="underline"
                                     onClick={() =>
                                         toggleRecoveryMode(clearErrors)
                                     }

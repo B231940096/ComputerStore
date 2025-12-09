@@ -1,92 +1,42 @@
-import { update } from '@/routes/password';
-import { Form, Head } from '@inertiajs/react';
-
-import InputError from '@/components/input-error';
+// Components
+import TextLink from '@/components/text-link';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Spinner } from '@/components/ui/spinner';
 import AuthLayout from '@/layouts/auth-layout';
+import { logout } from '@/routes';
+import { send } from '@/routes/verification';
+import { Form, Head } from '@inertiajs/react';
 
-interface ResetPasswordProps {
-    token: string;
-    email: string;
-}
-
-export default function ResetPassword({ token, email }: ResetPasswordProps) {
+export default function VerifyEmail({ status }: { status?: string }) {
     return (
         <AuthLayout
-            title="Reset password"
-            description="Please enter your new password below"
+            title="Verify email"
+            description="Please verify your email address by clicking on the link we just emailed to you."
         >
-            <Head title="Reset password" />
+            <Head title="Email verification" />
 
-            <Form
-                {...update.form()}
-                transform={(data) => ({ ...data, token, email })}
-                resetOnSuccess={['password', 'password_confirmation']}
-            >
-                {({ processing, errors }) => (
-                    <div className="grid gap-6">
-                        <div className="grid gap-2">
-                            <Label htmlFor="email">Email</Label>
-                            <Input
-                                id="email"
-                                type="email"
-                                name="email"
-                                autoComplete="email"
-                                value={email}
-                                className="mt-1 block w-full"
-                                readOnly
-                            />
-                            <InputError
-                                message={errors.email}
-                                className="mt-2"
-                            />
-                        </div>
+            {status === 'verification-link-sent' && (
+                <div className="mb-4 text-center text-sm font-medium text-green-600">
+                    A new verification link has been sent to the email address
+                    you provided during registration.
+                </div>
+            )}
 
-                        <div className="grid gap-2">
-                            <Label htmlFor="password">Password</Label>
-                            <Input
-                                id="password"
-                                type="password"
-                                name="password"
-                                autoComplete="new-password"
-                                className="mt-1 block w-full"
-                                autoFocus
-                                placeholder="Password"
-                            />
-                            <InputError message={errors.password} />
-                        </div>
-
-                        <div className="grid gap-2">
-                            <Label htmlFor="password_confirmation">
-                                Confirm password
-                            </Label>
-                            <Input
-                                id="password_confirmation"
-                                type="password"
-                                name="password_confirmation"
-                                autoComplete="new-password"
-                                className="mt-1 block w-full"
-                                placeholder="Confirm password"
-                            />
-                            <InputError
-                                message={errors.password_confirmation}
-                                className="mt-2"
-                            />
-                        </div>
-
-                        <Button
-                            type="submit"
-                            className="mt-4 w-full"
-                            disabled={processing}
-                            data-test="reset-password-button"
-                        >
+            <Form {...send.form()} className="space-y-6 text-center">
+                {({ processing }) => (
+                    <>
+                        <Button disabled={processing} variant="secondary">
                             {processing && <Spinner />}
-                            Reset password
+                            Resend verification email
                         </Button>
-                    </div>
+
+                        <TextLink
+                            href={logout()}
+                            className="mx-auto block text-sm"
+                        >
+                            Log out
+                        </TextLink>
+                    </>
                 )}
             </Form>
         </AuthLayout>
