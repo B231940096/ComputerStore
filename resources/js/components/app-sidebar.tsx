@@ -10,11 +10,11 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard, furniture, peripherals, preBuiltPc, console, laptop, phone, networkdevice, figure } from '@/routes';
+import { dashboard, furniture, peripherals, preBuiltPc, console, laptop, phone, networkdevice, figure, basket } from '@/routes';
 import { computerparts } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Box, Computer, Folder, Gamepad2, Gift, Laptop, LayoutGrid, Monitor, PcCase, Server, Smartphone } from 'lucide-react';
+import { BookOpen, Box, Computer, Folder, Gamepad2, Gift, Laptop, LayoutGrid, Monitor, PcCase, Server, Smartphone, ShoppingBasket } from 'lucide-react';
 
 const mainNavItems: NavItem[] = [
   {
@@ -66,6 +66,11 @@ icon: BookOpen,
     title: 'Фигур / Сувинер',
     href: figure(),
     icon: Gift,
+  },
+    {
+    title: 'Сагс',
+    href: basket(),
+    icon: ShoppingBasket,
   },
 ];
 

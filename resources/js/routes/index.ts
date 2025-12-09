@@ -495,7 +495,7 @@ furniture.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     furniture.form = furnitureForm
 /**
- * @see routes/web.php:27
+ * @see routes/web.php:24
  * @route '/pre-built-pc'
  */
 export const preBuiltPc = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -509,7 +509,7 @@ preBuiltPc.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:27
+ * @see routes/web.php:24
  * @route '/pre-built-pc'
  */
 preBuiltPc.url = (options?: RouteQueryOptions) => {
@@ -517,7 +517,7 @@ preBuiltPc.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:27
+ * @see routes/web.php:24
  * @route '/pre-built-pc'
  */
 preBuiltPc.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -525,7 +525,7 @@ preBuiltPc.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:27
+ * @see routes/web.php:24
  * @route '/pre-built-pc'
  */
 preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -534,7 +534,7 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:27
+ * @see routes/web.php:24
  * @route '/pre-built-pc'
  */
     const preBuiltPcForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -543,7 +543,7 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:27
+ * @see routes/web.php:24
  * @route '/pre-built-pc'
  */
         preBuiltPcForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -551,7 +551,7 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:27
+ * @see routes/web.php:24
  * @route '/pre-built-pc'
  */
         preBuiltPcForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -566,7 +566,7 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     preBuiltPc.form = preBuiltPcForm
 /**
- * @see routes/web.php:30
+ * @see routes/web.php:27
  * @route '/peripherals'
  */
 export const peripherals = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -580,7 +580,7 @@ peripherals.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:30
+ * @see routes/web.php:27
  * @route '/peripherals'
  */
 peripherals.url = (options?: RouteQueryOptions) => {
@@ -588,7 +588,7 @@ peripherals.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:30
+ * @see routes/web.php:27
  * @route '/peripherals'
  */
 peripherals.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -596,7 +596,7 @@ peripherals.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:30
+ * @see routes/web.php:27
  * @route '/peripherals'
  */
 peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -605,7 +605,7 @@ peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:30
+ * @see routes/web.php:27
  * @route '/peripherals'
  */
     const peripheralsForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -614,7 +614,7 @@ peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:30
+ * @see routes/web.php:27
  * @route '/peripherals'
  */
         peripheralsForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -622,7 +622,7 @@ peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:30
+ * @see routes/web.php:27
  * @route '/peripherals'
  */
         peripheralsForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -637,7 +637,7 @@ peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     peripherals.form = peripheralsForm
 /**
- * @see routes/web.php:33
+ * @see routes/web.php:30
  * @route '/console'
  */
 export const console = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -651,7 +651,7 @@ console.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:33
+ * @see routes/web.php:30
  * @route '/console'
  */
 console.url = (options?: RouteQueryOptions) => {
@@ -659,7 +659,7 @@ console.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:33
+ * @see routes/web.php:30
  * @route '/console'
  */
 console.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -667,7 +667,7 @@ console.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:33
+ * @see routes/web.php:30
  * @route '/console'
  */
 console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -676,7 +676,7 @@ console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:33
+ * @see routes/web.php:30
  * @route '/console'
  */
     const consoleForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -685,7 +685,7 @@ console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:33
+ * @see routes/web.php:30
  * @route '/console'
  */
         consoleForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -693,7 +693,7 @@ console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:33
+ * @see routes/web.php:30
  * @route '/console'
  */
         consoleForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -708,7 +708,7 @@ console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     console.form = consoleForm
 /**
- * @see routes/web.php:36
+ * @see routes/web.php:33
  * @route '/laptop'
  */
 export const laptop = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -722,7 +722,7 @@ laptop.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:36
+ * @see routes/web.php:33
  * @route '/laptop'
  */
 laptop.url = (options?: RouteQueryOptions) => {
@@ -730,7 +730,7 @@ laptop.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:36
+ * @see routes/web.php:33
  * @route '/laptop'
  */
 laptop.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -738,7 +738,7 @@ laptop.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:36
+ * @see routes/web.php:33
  * @route '/laptop'
  */
 laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -747,7 +747,7 @@ laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:36
+ * @see routes/web.php:33
  * @route '/laptop'
  */
     const laptopForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -756,7 +756,7 @@ laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:36
+ * @see routes/web.php:33
  * @route '/laptop'
  */
         laptopForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -764,7 +764,7 @@ laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:36
+ * @see routes/web.php:33
  * @route '/laptop'
  */
         laptopForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -779,7 +779,7 @@ laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     laptop.form = laptopForm
 /**
- * @see routes/web.php:39
+ * @see routes/web.php:36
  * @route '/phone'
  */
 export const phone = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -793,7 +793,7 @@ phone.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:39
+ * @see routes/web.php:36
  * @route '/phone'
  */
 phone.url = (options?: RouteQueryOptions) => {
@@ -801,7 +801,7 @@ phone.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:39
+ * @see routes/web.php:36
  * @route '/phone'
  */
 phone.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -809,7 +809,7 @@ phone.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:39
+ * @see routes/web.php:36
  * @route '/phone'
  */
 phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -818,7 +818,7 @@ phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:39
+ * @see routes/web.php:36
  * @route '/phone'
  */
     const phoneForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -827,7 +827,7 @@ phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:39
+ * @see routes/web.php:36
  * @route '/phone'
  */
         phoneForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -835,7 +835,7 @@ phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:39
+ * @see routes/web.php:36
  * @route '/phone'
  */
         phoneForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -850,7 +850,7 @@ phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     phone.form = phoneForm
 /**
- * @see routes/web.php:42
+ * @see routes/web.php:39
  * @route '/networkdevice'
  */
 export const networkdevice = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -864,7 +864,7 @@ networkdevice.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:42
+ * @see routes/web.php:39
  * @route '/networkdevice'
  */
 networkdevice.url = (options?: RouteQueryOptions) => {
@@ -872,7 +872,7 @@ networkdevice.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:42
+ * @see routes/web.php:39
  * @route '/networkdevice'
  */
 networkdevice.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -880,7 +880,7 @@ networkdevice.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:42
+ * @see routes/web.php:39
  * @route '/networkdevice'
  */
 networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -889,7 +889,7 @@ networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
 })
 
     /**
- * @see routes/web.php:42
+ * @see routes/web.php:39
  * @route '/networkdevice'
  */
     const networkdeviceForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -898,7 +898,7 @@ networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
     })
 
             /**
- * @see routes/web.php:42
+ * @see routes/web.php:39
  * @route '/networkdevice'
  */
         networkdeviceForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -906,7 +906,7 @@ networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
             method: 'get',
         })
             /**
- * @see routes/web.php:42
+ * @see routes/web.php:39
  * @route '/networkdevice'
  */
         networkdeviceForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -921,7 +921,7 @@ networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
     
     networkdevice.form = networkdeviceForm
 /**
- * @see routes/web.php:45
+ * @see routes/web.php:42
  * @route '/figure'
  */
 export const figure = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -935,7 +935,7 @@ figure.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:45
+ * @see routes/web.php:42
  * @route '/figure'
  */
 figure.url = (options?: RouteQueryOptions) => {
@@ -943,7 +943,7 @@ figure.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:45
+ * @see routes/web.php:42
  * @route '/figure'
  */
 figure.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -951,7 +951,7 @@ figure.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:45
+ * @see routes/web.php:42
  * @route '/figure'
  */
 figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -960,7 +960,7 @@ figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:45
+ * @see routes/web.php:42
  * @route '/figure'
  */
     const figureForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -969,7 +969,7 @@ figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:45
+ * @see routes/web.php:42
  * @route '/figure'
  */
         figureForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -977,7 +977,7 @@ figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:45
+ * @see routes/web.php:42
  * @route '/figure'
  */
         figureForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -991,3 +991,74 @@ figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
     
     figure.form = figureForm
+/**
+ * @see routes/web.php:45
+ * @route '/basket'
+ */
+export const basket = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: basket.url(options),
+    method: 'get',
+})
+
+basket.definition = {
+    methods: ["get","head"],
+    url: '/basket',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:45
+ * @route '/basket'
+ */
+basket.url = (options?: RouteQueryOptions) => {
+    return basket.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:45
+ * @route '/basket'
+ */
+basket.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: basket.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:45
+ * @route '/basket'
+ */
+basket.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: basket.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:45
+ * @route '/basket'
+ */
+    const basketForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: basket.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:45
+ * @route '/basket'
+ */
+        basketForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: basket.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:45
+ * @route '/basket'
+ */
+        basketForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: basket.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    basket.form = basketForm
