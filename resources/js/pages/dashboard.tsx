@@ -17,7 +17,7 @@ import { Heart, ShoppingCart, Star } from 'lucide-react';
 type Product = {
     id: number;
     title: string;
-    price: number;
+    price: string;
     image: string | undefined;
     badge: string | undefined;
     isfreedelivery: boolean;
@@ -99,44 +99,44 @@ const brandLogos = [
 // ];
 
 // Monitor Section
-const monitors = [
-    {
-        title: 'Asus - Rog Strix XG27ACMES 27 inch 255Hz 2K OC',
-        value: '950,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 2,
-        image: '/monitor/1-17.webp',
-    },
-    {
-        title: 'Asus - Rog Strix XG27ACMS 27-inch HDR (2560 x 1440) 320Hz (OC).',
-        value: '1,500,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 3,
-        image: '/monitor/monitor-2.png',
-    },
-    {
-        title: 'Asus - Rog Strix OLED XG27AQDNG Gaming monitor – 27-inch 1440p QD-OLED, 360 Hz, 0.03ms',
-        value: '2,700,000',
-        rating: 5.0,
-        badge: 'Дууссан',
-        isfreedelivery: false,
-        stock: 0,
-        image: '/monitor/monitor-3.png',
-    },
-    {
-        title: 'Asus - TUF Gaming VG27AQM1.5A Gaming Monitor - 27-inch QHD Fast-IPS panel, 300Hz',
-        value: '880,000',
-        rating: 5.0,
-        badge: 'Дууссан',
-        isfreedelivery: false,
-        stock: 0,
-        image: '/monitor/4-67.webp',
-    },
-];
+// const monitors = [
+//     {
+//         title: 'Asus - Rog Strix XG27ACMES 27 inch 255Hz 2K OC',
+//         value: '950,000',
+//         rating: 5.0,
+//         badge: 'Шинэ',
+//         isfreedelivery: true,
+//         stock: 2,
+//         image: '/monitor/1-17.webp',
+//     },
+//     {
+//         title: 'Asus - Rog Strix XG27ACMS 27-inch HDR (2560 x 1440) 320Hz (OC).',
+//         value: '1,500,000',
+//         rating: 5.0,
+//         badge: 'Шинэ',
+//         isfreedelivery: true,
+//         stock: 3,
+//         image: '/monitor/monitor-2.png',
+//     },
+//     {
+//         title: 'Asus - Rog Strix OLED XG27AQDNG Gaming monitor – 27-inch 1440p QD-OLED, 360 Hz, 0.03ms',
+//         value: '2,700,000',
+//         rating: 5.0,
+//         badge: 'Дууссан',
+//         isfreedelivery: false,
+//         stock: 0,
+//         image: '/monitor/monitor-3.png',
+//     },
+//     {
+//         title: 'Asus - TUF Gaming VG27AQM1.5A Gaming Monitor - 27-inch QHD Fast-IPS panel, 300Hz',
+//         value: '880,000',
+//         rating: 5.0,
+//         badge: 'Дууссан',
+//         isfreedelivery: false,
+//         stock: 0,
+//         image: '/monitor/4-67.webp',
+//     },
+// ];
 
 // Laptop & Apple Section
 const laptopsAndApple = [
