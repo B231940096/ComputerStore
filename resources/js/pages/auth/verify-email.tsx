@@ -1,4 +1,3 @@
-// Components
 import TextLink from '@/components/text-link';
 import { Button } from '@/components/ui/button';
 import { Spinner } from '@/components/ui/spinner';
@@ -10,15 +9,14 @@ import { Form, Head } from '@inertiajs/react';
 export default function VerifyEmail({ status }: { status?: string }) {
     return (
         <AuthLayout
-            title="Verify email"
-            description="Please verify your email address by clicking on the link we just emailed to you."
+            title="Имэйл баталгаажуулах"
+            description="Бид таны имэйл хаяг руу илгээсэн холбоос дээр дарж баталгаажуулна уу."
         >
-            <Head title="Email verification" />
+            <Head title="Имэйл баталгаажуулалт" />
 
             {status === 'verification-link-sent' && (
                 <div className="mb-4 text-center text-sm font-medium text-green-600">
-                    A new verification link has been sent to the email address
-                    you provided during registration.
+                    Шинэ баталгаажуулах холбоос таны имэйл хаяг руу илгээгдлээ.
                 </div>
             )}
 
@@ -27,14 +25,14 @@ export default function VerifyEmail({ status }: { status?: string }) {
                     <>
                         <Button disabled={processing} variant="secondary">
                             {processing && <Spinner />}
-                            Resend verification email
+                            Баталгаажуулах имэйл дахин илгээх
                         </Button>
 
                         <TextLink
                             href={logout()}
                             className="mx-auto block text-sm"
                         >
-                            Log out
+                            Гарах
                         </TextLink>
                     </>
                 )}

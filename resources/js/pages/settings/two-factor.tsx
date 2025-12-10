@@ -19,7 +19,7 @@ interface TwoFactorProps {
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
-        title: 'Two-Factor Authentication',
+        title: 'Two-Factor баталгаажуулалт',
         href: show.url(),
     },
 ];
@@ -42,21 +42,20 @@ export default function TwoFactor({
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
-            <Head title="Two-Factor Authentication" />
+            <Head title="Two-Factor баталгаажуулалт" />
             <SettingsLayout>
                 <div className="space-y-6">
                     <HeadingSmall
-                        title="Two-Factor Authentication"
-                        description="Manage your two-factor authentication settings"
+                        title="Two-Factor баталгаажуулалт"
+                        description="Two-Factor баталгаажуулалтын тохиргоог удирдах"
                     />
                     {twoFactorEnabled ? (
                         <div className="flex flex-col items-start justify-start space-y-4">
-                            <Badge variant="default">Enabled</Badge>
+                            <Badge variant="default">Идэвхжсэн</Badge>
                             <p className="text-muted-foreground">
-                                With two-factor authentication enabled, you will
-                                be prompted for a secure, random pin during
-                                login, which you can retrieve from the
-                                TOTP-supported application on your phone.
+                                Two-Factor баталгаажуулалт идэвхжсэн үед,
+                                нэвтрэх үед та аюулгүй, санамсаргүй пин кодыг оруулах шаардлагатай болно,
+                                энэ пин кодыг утасныхаа TOTP дэмждэг програм хангамжаас авах боломжтой.
                             </p>
 
                             <TwoFactorRecoveryCodes
@@ -81,12 +80,10 @@ export default function TwoFactor({
                         </div>
                     ) : (
                         <div className="flex flex-col items-start justify-start space-y-4">
-                            <Badge variant="destructive">Disabled</Badge>
+                            <Badge variant="destructive">Идэвхгүй</Badge>
                             <p className="text-muted-foreground">
-                                When you enable two-factor authentication, you
-                                will be prompted for a secure pin during login.
-                                This pin can be retrieved from a TOTP-supported
-                                application on your phone.
+                                Two-Factor баталгаажуулалтыг идэвхжүүлсэн үед, та нэвтрэх үед аюулгүй пин кодыг оруулах шаардлагатай болно.
+                                Энэ пин кодыг утасныхаа TOTP дэмждэг програм хангамжаас авах боломжтой.
                             </p>
 
                             <div>
@@ -95,7 +92,7 @@ export default function TwoFactor({
                                         onClick={() => setShowSetupModal(true)}
                                     >
                                         <ShieldCheck />
-                                        Continue Setup
+                                        Тохиргоог үргэлжлүүлэх
                                     </Button>
                                 ) : (
                                     <Form
@@ -110,7 +107,7 @@ export default function TwoFactor({
                                                 disabled={processing}
                                             >
                                                 <ShieldCheck />
-                                                Enable 2FA
+                                               2FA-ийг Идэвхжүүлэх 
                                             </Button>
                                         )}
                                     </Form>

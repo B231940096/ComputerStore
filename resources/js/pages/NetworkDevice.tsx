@@ -142,8 +142,9 @@ export default function NetworkDevice() {
         {/* ===== Tabs Header (Category Buttons) ===== */}
         <TabsList
           className="
-    flex gap-3 overflow-x-auto whitespace-nowrap scrollbar-none
-    px-4 py-2 bg-transparent
+          mt-5 ml-auto mr-auto
+    flex gap-3 foreground whitespace-nowrap scrollbar-none
+    px-5 py-5 bg-transparent
   "
         >
           {categories.map((btn) => (
@@ -151,12 +152,12 @@ export default function NetworkDevice() {
               key={btn.id}
               value={btn.id}
               className="
-        flex items-center gap-2 px-4 py-2
-        rounded-lg border border-gray-800
-        bg-sidebar text-gray-300
-        whitespace-nowrap
-        data-[state=active]:bg-white data-[state=active]:text-black
-        hover:bg-[#363234]
+        flex items-center gap-2 px-5 py-5
+        rounded-lg border border-border
+        bg-card text-foreground
+         whitespace-nowrap
+        data-[state=active]:bg-primary  data-[state=active]:text-primary-foreground
+        hover:bg-muted
         transition-all
       "
             >
@@ -172,21 +173,21 @@ export default function NetworkDevice() {
           <TabsContent key={key} value={key} className="mt-20">
             <div className="mb-4 flex items-center justify-between px-8">
               <div>
-                <h2 className="text-white text-lg font-semibold">
+                <h2 className="text-foreground  text-lg font-semibold">
                   {categories.find((c) => c.id === key)?.label}
                 </h2>
-                <p className="text-gray-400">{items.length} бүтээгдэхүүн</p>
+                <p className="text-muted-foreground">{items.length} бүтээгдэхүүн</p>
               </div>
               <div className="flex gap-2">
                 <Button
                   variant="outline"
-                  className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white"
+                  className="border-border bg-card text-foreground hover:bg-muted"
                 >
                   Үнээр
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white"
+                  className="border-border bg-card text-foreground hover:bg-muted"
                 >
                   Нэрээр
                 </Button>
@@ -198,7 +199,7 @@ export default function NetworkDevice() {
               {items.map((product, index) => (
                 <Card
                   key={index}
-                  className="border border-gray-800 bg-sidebar rounded-xl overflow-hidden hover:bg-[#363234] transition-all"
+                  className="border border-border bg-card rounded-xl overflow-hidden hover:bg-muted transition-all"
                 >
                   {/* Image */}
                   {product.image && (
@@ -206,13 +207,13 @@ export default function NetworkDevice() {
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full h-full object-center"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   )}
 
                   <CardContent className="p-4 flex flex-col justify-between">
-                    <h3 className="text-white font-medium mb-2">{product.title}</h3>
+                    <h3 className="text-foreground  font-medium mb-2">{product.title}</h3>
 
                     {/* Badges */}
                     <div className="flex gap-2 mt-2 flex-wrap">
@@ -221,10 +222,10 @@ export default function NetworkDevice() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex justify-between">
-                    <Button variant="outline" className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <Button variant="outline" className="border-border bg-card text-foreground hover:bg-muted">
                       Сагсанд нэмэх
                     </Button>
-                    <span className="text-gray-400">{product.value}₮</span>
+                    <span className="text-muted-foreground">{product.value}₮</span>
                   </CardFooter>
                 </Card>
               ))}
