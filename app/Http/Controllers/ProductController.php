@@ -103,20 +103,19 @@ class ProductController extends Controller
 
     // Phone хуудас
     public function phone()
-    {
-        $products = [
-            'iPhone' => Product::where('category_id', 'iPhone')->get(),
-            'tablet' => Product::where('category_id', 'tablet')->get(),
-            'smartwatch' => Product::where('category_id', 'smartwatch')->get(),
+{
+    return Inertia::render('Phone', [
+        'products' => [
+            'iPhone'      => Product::where('category_id', 'iPhone')->get(),
+            'tablet'      => Product::where('category_id', 'tablet')->get(),
+            'smartwatch'  => Product::where('category_id', 'smartwatch')->get(),
             'accessories' => Product::where('category_id', 'accessories_phone')->get(),
-            'earbuds' => Product::where('category_id', 'earbuds')->get(),
-            'cables' => Product::where('category_id', 'cables')->get(),
-        ];
+            'earbuds'     => Product::where('category_id', 'earbuds')->get(),
+            'cables'      => Product::where('category_id', 'cables')->get(),
+        ],
+    ]);
+}
 
-        return Inertia::render('Phone', [
-            'products' => $products
-        ]);
-    }
 
     // Furniture хуудас
     public function furniture()

@@ -99,84 +99,84 @@ const brandLogos = [
 // ];
 
 // Monitor Section
-const monitors = [
-    {
-        title: 'Asus - Rog Strix XG27ACMES 27 inch 255Hz 2K OC',
-        value: '950,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 2,
-        image: '/monitor/1-17.webp',
-    },
-    {
-        title: 'Asus - Rog Strix XG27ACMS 27-inch HDR (2560 x 1440) 320Hz (OC).',
-        value: '1,500,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 3,
-        image: '/monitor/monitor-2.png',
-    },
-    {
-        title: 'Asus - Rog Strix OLED XG27AQDNG Gaming monitor – 27-inch 1440p QD-OLED, 360 Hz, 0.03ms',
-        value: '2,700,000',
-        rating: 5.0,
-        badge: 'Дууссан',
-        isfreedelivery: false,
-        stock: 0,
-        image: '/monitor/monitor-3.png',
-    },
-    {
-        title: 'Asus - TUF Gaming VG27AQM1.5A Gaming Monitor - 27-inch QHD Fast-IPS panel, 300Hz',
-        value: '880,000',
-        rating: 5.0,
-        badge: 'Дууссан',
-        isfreedelivery: false,
-        stock: 0,
-        image: '/monitor/4-67.webp',
-    },
-];
+// const monitors = [
+//     {
+//         title: 'Asus - Rog Strix XG27ACMES 27 inch 255Hz 2K OC',
+//         value: '950,000',
+//         rating: 5.0,
+//         badge: 'Шинэ',
+//         isfreedelivery: true,
+//         stock: 2,
+//         image: '/monitor/1-17.webp',
+//     },
+//     {
+//         title: 'Asus - Rog Strix XG27ACMS 27-inch HDR (2560 x 1440) 320Hz (OC).',
+//         value: '1,500,000',
+//         rating: 5.0,
+//         badge: 'Шинэ',
+//         isfreedelivery: true,
+//         stock: 3,
+//         image: '/monitor/monitor-2.png',
+//     },
+//     {
+//         title: 'Asus - Rog Strix OLED XG27AQDNG Gaming monitor – 27-inch 1440p QD-OLED, 360 Hz, 0.03ms',
+//         value: '2,700,000',
+//         rating: 5.0,
+//         badge: 'Дууссан',
+//         isfreedelivery: false,
+//         stock: 0,
+//         image: '/monitor/monitor-3.png',
+//     },
+//     {
+//         title: 'Asus - TUF Gaming VG27AQM1.5A Gaming Monitor - 27-inch QHD Fast-IPS panel, 300Hz',
+//         value: '880,000',
+//         rating: 5.0,
+//         badge: 'Дууссан',
+//         isfreedelivery: false,
+//         stock: 0,
+//         image: '/monitor/4-67.webp',
+//     },
+// ];
 
 // Laptop & Apple Section
-const laptopsAndApple = [
-    {
-        title: 'MSI Stealth 18 Mercedes-AMG - 18" - Ultra 9 185H - RTX 4080 - 64 GB D5- 2 TB PCIe SSD',
-        value: '12,000,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 1,
-        image: '/products/laptop-1.png',
-    },
-    {
-        title: 'Apple iPad Pro 13-Inch (M4) 256GB WIFI / Silver',
-        value: '5,000,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 2,
-        image: '/products/ipad-1.png',
-    },
-    {
-        title: 'Aorus 15 Series -15" 165Hz IPS - Ultra 7 155H - RTX 4060 Laptop GPU - 16GB DDR5 - 1TB PCIe SSD - (15 BKG-13US754SH )',
-        value: '6,000,000',
-        rating: 5.0,
-        badge: 'Дууссан',
-        isfreedelivery: false,
-        stock: 0,
-        image: '/products/laptop-2.png',
-    },
-    {
-        title: 'Apple - Airpods 4 with Active Noise Cancellation',
-        value: '720,000',
-        rating: 5.0,
-        badge: 'Дууссан',
-        isfreedelivery: false,
-        stock: 0,
-        image: '/products/airpods.png',
-    },
-];
+// const laptopsAndApple = [
+//     {
+//         title: 'MSI Stealth 18 Mercedes-AMG - 18" - Ultra 9 185H - RTX 4080 - 64 GB D5- 2 TB PCIe SSD',
+//         value: '12,000,000',
+//         rating: 5.0,
+//         badge: 'Шинэ',
+//         isfreedelivery: true,
+//         stock: 1,
+//         image: '/products/laptop-1.png',
+//     },
+//     {
+//         title: 'Apple iPad Pro 13-Inch (M4) 256GB WIFI / Silver',
+//         value: '5,000,000',
+//         rating: 5.0,
+//         badge: 'Шинэ',
+//         isfreedelivery: true,
+//         stock: 2,
+//         image: '/products/ipad-1.png',
+//     },
+//     {
+//         title: 'Aorus 15 Series -15" 165Hz IPS - Ultra 7 155H - RTX 4060 Laptop GPU - 16GB DDR5 - 1TB PCIe SSD - (15 BKG-13US754SH )',
+//         value: '6,000,000',
+//         rating: 5.0,
+//         badge: 'Дууссан',
+//         isfreedelivery: false,
+//         stock: 0,
+//         image: '/products/laptop-2.png',
+//     },
+//     {
+//         title: 'Apple - Airpods 4 with Active Noise Cancellation',
+//         value: '720,000',
+//         rating: 5.0,
+//         badge: 'Дууссан',
+//         isfreedelivery: false,
+//         stock: 0,
+//         image: '/products/airpods.png',
+//     },
+// ];
 
 export default function Dashboard({
     newProducts,
