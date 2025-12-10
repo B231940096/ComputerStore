@@ -17,7 +17,7 @@ import { Heart, ShoppingCart, Star } from 'lucide-react';
 type Product = {
     id: number;
     title: string;
-    price: number;
+    price: string;
     image: string | undefined;
     badge: string | undefined;
     isfreedelivery: boolean;
