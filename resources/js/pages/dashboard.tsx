@@ -283,7 +283,7 @@ export default function Dashboard({
                                         <ShoppingCart className="mr-2 h-4 w-4" />
                                         Сагсанд нэмэх
                                     </Button>
-                                    <span className="text-muted-foreground">
+                                    <span className="text-foreground">
                                         {featuredProduct.price}₮
                                     </span>
                                 </CardFooter>
@@ -354,7 +354,7 @@ export default function Dashboard({
                                     >
                                         Сагсанд нэмэх
                                     </Button>
-                                    <span className="text-muted-foreground">
+                                    <span className="text-foreground">
                                         {product.price}₮
                                     </span>
                                 </CardFooter>
@@ -418,7 +418,7 @@ export default function Dashboard({
                                     >
                                         Сагсанд нэмэх
                                     </Button>
-                                    <span className="text-muted-foreground">
+                                    <span className="text-foreground">
                                         {pc.price}₮
                                     </span>
                                 </CardFooter>
@@ -491,7 +491,7 @@ export default function Dashboard({
                                     >
                                         Сагсанд нэмэх
                                     </Button>
-                                    <span className="text-muted-foreground">
+                                    <span className="text-foreground">
                                         {monitor.price}₮
                                     </span>
                                 </CardFooter>
@@ -542,8 +542,8 @@ export default function Dashboard({
                                             <Badge
                                                 variant={
                                                     item.badge === 'Дууссан'
-                                                        ? 'destructive'
-                                                        : 'secondary'
+                                                        ? 'secondary'
+                                                        : 'destructive'
                                                 }
                                             >
                                                 {item.badge}
@@ -564,7 +564,7 @@ export default function Dashboard({
                                     >
                                         Сагсанд нэмэх
                                     </Button>
-                                    <span className="text-muted-foreground">
+                                    <span className="text-foreground">
                                         {item.price}₮
                                     </span>
                                 </CardFooter>
