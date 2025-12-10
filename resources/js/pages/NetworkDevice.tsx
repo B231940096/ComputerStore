@@ -223,7 +223,7 @@ export default function NetworkDevice() {
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full h-full object-center"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   )}
