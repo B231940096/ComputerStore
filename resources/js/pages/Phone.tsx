@@ -389,8 +389,8 @@ export default function Phone() {
         {/* ===== Tabs Header (Category Buttons) ===== */}
         <TabsList
           className="
-    flex gap-3 overflow-x-auto whitespace-nowrap scrollbar-none
-    px-4 py-2 bg-transparent
+    flex gap-3  whitespace-nowrap scrollbar-none items-center mt-5
+    px-5 py-5 bg-transparent ml-auto mr-auto
   "
         >
           {categories.map((btn) => (
@@ -398,7 +398,8 @@ export default function Phone() {
               key={btn.id}
               value={btn.id}
               className="
-        flex items-center gap-2 px-4 py-2
+        flex items-center gap-2 px-5 py-5
+        
         rounded-lg border border-gray-800
         bg-sidebar text-gray-300
         whitespace-nowrap
