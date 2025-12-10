@@ -24,9 +24,6 @@ Route::get('/furniture', function () {
 Route::get('/pre-built-pc', function () {
     return Inertia::render('PreBuiltPC');
 })->name('pre-built-pc');
-Route::get('/pre-built-pc', function () {
-    return Inertia::render('PreBuiltPC');
-})->name('pre-built-pc');
 Route::get('/peripherals', function () {
     return Inertia::render('Peripherals');
 })->name('peripherals');
@@ -45,5 +42,8 @@ Route::get('/networkdevice', function () {
 Route::get('/figure', function () {
     return Inertia::render('Figure');
 })->name('figure');
+Route::get('/basket', function () {
+    return Inertia::render('Basket');
+})->name('basket');
 
 require __DIR__ . '/settings.php';

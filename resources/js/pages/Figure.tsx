@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import AppLayout from '@/layouts/app-layout';
 import { figure } from '@/routes/index';
@@ -102,7 +103,7 @@ const products: Product[] = [
         badge: "Шинэ",
         image: "/banner/figure/figure-11.png",
     },
-        {
+    {
         title: "TAMASHII NATIONS Iguro Obanai Demon Slayer, Bandai Spirits Figuarts Mini 3.54(Goat Ver.)",
         value: "120,000,000,000",
         isfreedelivery: false,
@@ -172,7 +173,7 @@ export default function Figure() {
         <AppLayout breadcrumbs={breadcrumbs}>
             <div className="w-full h-32 md:h-36 mb-6 relative">
                 <img
-                    src="/banner/pcs/image.webp" 
+                    src="/banner/figure/wallpaper.jpg"
                     alt="Бэлэн компьютерууд"
                     className="w-full h-full object-cover rounded-lg shadow-md"
                 />
@@ -199,6 +200,9 @@ export default function Figure() {
                             </div>
                         </CardContent>
                         <CardFooter className="flex justify-between">
+                            <Button variant="outline" className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white">
+                                Сагсанд нэмэх
+                            </Button>
                             <span className="text-gray-400">{product.value}₮</span>
                         </CardFooter>
                     </Card>

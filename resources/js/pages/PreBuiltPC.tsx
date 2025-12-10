@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import AppLayout from '@/layouts/app-layout';
 import { preBuiltPc } from '@/routes/index';
@@ -143,6 +144,9 @@ export default function PreBuiltPC() {
                             </div>
                         </CardContent>
                         <CardFooter className="flex justify-between">
+                            <Button variant="outline" className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white">
+                                Сагсанд нэмэх
+                            </Button>
                             <span className="text-gray-400">{product.value}₮</span>
                         </CardFooter>
                     </Card>
