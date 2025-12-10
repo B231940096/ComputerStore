@@ -14,7 +14,23 @@ import { type BreadcrumbItem } from '@/types';
 import { Head, Link } from '@inertiajs/react';
 import Autoplay from 'embla-carousel-autoplay';
 import { Heart, ShoppingCart, Star } from 'lucide-react';
+type Product = {
+    id: number;
+    title: string;
+    price: number;
+    image: string | undefined;
+    badge: string | undefined;
+    isfreedelivery: boolean;
+    rating: number;
+};
 
+interface DashboardProps {
+    newProducts: Product[];
+    featuredProduct: Product | undefined;
+    prebuiltPCs: Product[];
+    monitors: Product[];
+    laptops: Product[];
+}
 const breadcrumbs: BreadcrumbItem[] = [
     {
         title: 'Дээр хуудас',
@@ -33,94 +49,54 @@ const brandLogos = [
 ];
 
 // Special Featured Product
-const featuredProduct = {
-    title: 'Sony - PULSE Explore Wireless Earbuds',
-    rating: 5.0,
-    badge: 'Шинэ',
-    value: '800,000',
-    image: '/banner/console/earbuds.png',
-    isfreedelivery: true,
-};
-
-// Newly Added Products
-const newProducts = [
-    {
-        title: 'Asrock - Aspire Vero 16 Laptop - Ultra 7 155U , 16GB , 1 TB SSD',
-        value: '3,150,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 5,
-        image: '/banner/laptop/notebook/lt-1.png',
-    },
-    {
-        title: 'Logitech - G Pro Superlight 2C / White',
-        value: '540,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 5,
-        image: '/products/mouse-1.png',
-    },
-    {
-        title: 'Logitech - G Pro Superlight 2C / Black',
-        value: '540,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 6,
-        image: '/products/mouse-2.png',
-    },
-    {
-        title: 'ATK A87 PRO Tri-Mode Wireless Mechanical Keyboard - Shadow Black',
-        value: '200,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 2,
-        image: '/products/keyboard-1.png',
-    },
-];
+// const featuredProduct = {
+//     title: 'Sony - PULSE Explore Wireless Earbuds',
+//     rating: 5.0,
+//     badge: 'Шинэ',
+//     value: '800,000',
+//     image: '/banner/console/earbuds.png',
+//     isfreedelivery: true,
+// };
 
 // Prebuilt PC Section
-const prebuiltPCs = [
-    {
-        title: 'Intel Core i5-14490F , PNY - RTX 5050 Dual Fan Graphics Card , AIGO W60 Micro-ATX Chassis -Black',
-        value: '3,105,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 1,
-        image: '/products/pc-1.png',
-    },
-    {
-        title: 'Intel - Core i7 14700F , Reaper - RX 9060 XT 8GB , Corsair - 3000D AIRFLOW Mid-Tower Case',
-        value: '4,635,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 3,
-        image: '/products/pc-2.png',
-    },
-    {
-        title: 'AMD Ryzen 5 7500F , PNY - RTX 5060 Overclocked Dual Fan , ASUS Prime AP202 - Black',
-        value: '3,725,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 2,
-        image: '/products/pc-3.png',
-    },
-    {
-        title: 'AMD - Ryzen 9 9950X3D , PNY - GeForce RTX 5080 ARGB EPIC-X RGB, Asus ROG Strix Helios GX601 RGB Mid-Tower Black',
-        value: '14,000,000',
-        rating: 5.0,
-        badge: 'Шинэ',
-        isfreedelivery: true,
-        stock: 2,
-        image: '/products/pc-4.png',
-    },
-];
+// const prebuiltPCs = [
+//     {
+//         title: 'Intel Core i5-14490F , PNY - RTX 5050 Dual Fan Graphics Card , AIGO W60 Micro-ATX Chassis -Black',
+//         value: '3,105,000',
+//         rating: 5.0,
+//         badge: 'Шинэ',
+//         isfreedelivery: true,
+//         stock: 1,
+//         image: '/products/pc-1.png',
+//     },
+//     {
+//         title: 'Intel - Core i7 14700F , Reaper - RX 9060 XT 8GB , Corsair - 3000D AIRFLOW Mid-Tower Case',
+//         value: '4,635,000',
+//         rating: 5.0,
+//         badge: 'Шинэ',
+//         isfreedelivery: true,
+//         stock: 3,
+//         image: '/products/pc-2.png',
+//     },
+//     {
+//         title: 'AMD Ryzen 5 7500F , PNY - RTX 5060 Overclocked Dual Fan , ASUS Prime AP202 - Black',
+//         value: '3,725,000',
+//         rating: 5.0,
+//         badge: 'Шинэ',
+//         isfreedelivery: true,
+//         stock: 2,
+//         image: '/products/pc-3.png',
+//     },
+//     {
+//         title: 'AMD - Ryzen 9 9950X3D , PNY - GeForce RTX 5080 ARGB EPIC-X RGB, Asus ROG Strix Helios GX601 RGB Mid-Tower Black',
+//         value: '14,000,000',
+//         rating: 5.0,
+//         badge: 'Шинэ',
+//         isfreedelivery: true,
+//         stock: 2,
+//         image: '/products/pc-4.png',
+//     },
+// ];
 
 // Monitor Section
 const monitors = [
@@ -202,7 +178,13 @@ const laptopsAndApple = [
     },
 ];
 
-export default function Dashboard() {
+export default function Dashboard({
+    newProducts,
+    featuredProduct,
+    prebuiltPCs,
+    monitors,
+    laptops,
+}: DashboardProps) {
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Dashboard" />
@@ -261,51 +243,52 @@ export default function Dashboard() {
                     </h2>
                     <div className="grid grid-cols-1 gap-6 lg:grid-cols-[350px_1fr]">
                         {/* Featured Product Card */}
-                        <Card className="overflow-hidden rounded-xl border border-border bg-card transition-colors hover:bg-muted">
-                            <div className="relative h-80">
-                                <img
-                                    src={featuredProduct.image}
-                                    alt={featuredProduct.title}
-                                    className="h-full w-full object-contain"
-                                />
+                        {featuredProduct && (
+                            <Card className="overflow-hidden rounded-xl border border-border bg-card hover:bg-muted">
+                                <div className="relative h-80">
+                                    <img
+                                        src={featuredProduct.image}
+                                        alt={featuredProduct.title}
+                                        className="h-full w-full object-contain"
+                                    />
+                                    <Heart className="absolute top-2 right-2 h-6 w-6" />
+                                </div>
 
-                                <Heart className="absolute top-2 right-2 h-6 w-6 cursor-pointer text-muted-foreground transition-colors hover:fill-red-500 hover:text-red-500" />
-                            </div>
+                                <CardContent className="space-y-2">
+                                    <h3 className="font-medium">
+                                        {featuredProduct.title}
+                                    </h3>
 
-                            <CardContent className="space-y-2">
-                                <h3 className="font-medium text-foreground">
-                                    {featuredProduct.title}
-                                </h3>
+                                    <div className="flex items-center gap-2">
+                                        <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                                        <span>{featuredProduct.rating}</span>
+                                    </div>
 
-                                <div className="flex items-center gap-2">
-                                    <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                                    <span className="font-medium text-foreground">
-                                        {featuredProduct.rating}
+                                    <div className="flex gap-2">
+                                        {featuredProduct.badge && (
+                                            <Badge variant="destructive">
+                                                {featuredProduct.badge}
+                                            </Badge>
+                                        )}
+                                        {featuredProduct.isfreedelivery && (
+                                            <Badge variant="outline">
+                                                Хүргэлт үнэгүй
+                                            </Badge>
+                                        )}
+                                    </div>
+                                </CardContent>
+
+                                <CardFooter className="flex justify-between">
+                                    <Button variant="outline">
+                                        <ShoppingCart className="mr-2 h-4 w-4" />
+                                        Сагсанд нэмэх
+                                    </Button>
+                                    <span className="text-muted-foreground">
+                                        {featuredProduct.price}₮
                                     </span>
-                                </div>
-
-                                <div className="flex flex-wrap gap-2">
-                                    <Badge variant="destructive">
-                                        {featuredProduct.badge}
-                                    </Badge>
-                                    {featuredProduct.isfreedelivery && (
-                                        <Badge variant="outline">
-                                            Хүргэлт үнэгүй
-                                        </Badge>
-                                    )}
-                                </div>
-                            </CardContent>
-
-                            <CardFooter className="flex items-center justify-between">
-                                <Button variant="outline">
-                                    <ShoppingCart className="mr-2 h-4 w-4" />
-                                    Сагсанд нэмэх
-                                </Button>
-                                <span className="text-muted-foreground">
-                                    {featuredProduct.value}₮
-                                </span>
-                            </CardFooter>
-                        </Card>
+                                </CardFooter>
+                            </Card>
+                        )}
 
                         {/* Large Banner Image */}
                         <div className="overflow-hidden rounded-xl bg-muted">
@@ -331,7 +314,7 @@ export default function Dashboard() {
                         {newProducts.map((product, i) => (
                             <Card
                                 key={i}
-                                className="overflow-hidden rounded-xl border border-gray-800 bg-card transition-all hover:bg-muted"
+                                className="overflow-hidden rounded-xl border border-border bg-card transition-all hover:bg-muted"
                             >
                                 <div className="relative h-64 w-full md:h-80 lg:h-80">
                                     <img
@@ -372,7 +355,7 @@ export default function Dashboard() {
                                         Сагсанд нэмэх
                                     </Button>
                                     <span className="text-muted-foreground">
-                                        {product.value}₮
+                                        {product.price}₮
                                     </span>
                                 </CardFooter>
                             </Card>
@@ -395,7 +378,7 @@ export default function Dashboard() {
                         {prebuiltPCs.map((pc, i) => (
                             <Card
                                 key={i}
-                                className="overflow-hidden rounded-xl border border-gray-800 bg-sidebar transition-all hover:bg-muted"
+                                className="overflow-hidden rounded-xl border border-border bg-sidebar transition-all hover:bg-muted"
                             >
                                 <div className="relative h-64 w-full md:h-80 lg:h-80">
                                     <img
@@ -406,12 +389,12 @@ export default function Dashboard() {
                                     <Heart className="absolute top-2 right-2 z-10 h-5 w-5 cursor-pointer transition-colors hover:fill-red-500 hover:text-red-500" />
                                 </div>
                                 <CardContent className="flex flex-col justify-between p-4">
-                                    <h3 className="mb-2 font-medium text-white">
+                                    <h3 className="mb-2 font-medium text-foreground">
                                         {pc.title}
                                     </h3>
                                     <div className="mb-2 flex items-center gap-2">
                                         <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                                        <span className="text-sm font-medium text-white">
+                                        <span className="text-sm font-medium text-foreground">
                                             {pc.rating}
                                         </span>
                                     </div>
@@ -431,12 +414,12 @@ export default function Dashboard() {
                                 <CardFooter className="flex items-center justify-between p-4">
                                     <Button
                                         variant="outline"
-                                        className="border-gray-700 bg-card text-muted-foreground hover:bg-gray-800 hover:text-foreground"
+                                        className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
                                     >
                                         Сагсанд нэмэх
                                     </Button>
                                     <span className="text-muted-foreground">
-                                        {pc.value}₮
+                                        {pc.price}₮
                                     </span>
                                 </CardFooter>
                             </Card>
@@ -461,7 +444,7 @@ export default function Dashboard() {
                         {monitors.map((monitor, i) => (
                             <Card
                                 key={i}
-                                className={`overflow-hidden rounded-xl border border-gray-800 bg-sidebar transition-all hover:bg-muted ${monitor.badge === 'Дууссан' ? 'opacity-75' : ''}`}
+                                className={`overflow-hidden rounded-xl border border-border bg-sidebar transition-all hover:bg-muted ${monitor.badge === 'Дууссан' ? 'opacity-75' : ''}`}
                             >
                                 <div className="relative h-64 w-full md:h-80 lg:h-80">
                                     <img
@@ -472,12 +455,12 @@ export default function Dashboard() {
                                     <Heart className="absolute top-2 right-2 z-10 h-5 w-5 cursor-pointer transition-colors hover:fill-red-500 hover:text-red-500" />
                                 </div>
                                 <CardContent className="flex flex-col justify-between p-4">
-                                    <h3 className="mb-2 font-medium text-white">
+                                    <h3 className="mb-2 font-medium text-foreground">
                                         {monitor.title}
                                     </h3>
                                     <div className="mb-2 flex items-center gap-2">
                                         <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                                        <span className="text-sm font-medium text-white">
+                                        <span className="text-sm font-medium text-foreground">
                                             {monitor.rating}
                                         </span>
                                     </div>
@@ -503,13 +486,13 @@ export default function Dashboard() {
                                 <CardFooter className="flex items-center justify-between p-4">
                                     <Button
                                         variant="outline"
-                                        className="border-gray-700 bg-card text-muted-foreground hover:bg-gray-800 hover:text-foreground"
+                                        className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
                                         disabled={monitor.badge === 'Дууссан'}
                                     >
                                         Сагсанд нэмэх
                                     </Button>
                                     <span className="text-muted-foreground">
-                                        {monitor.value}₮
+                                        {monitor.price}₮
                                     </span>
                                 </CardFooter>
                             </Card>
@@ -531,10 +514,10 @@ export default function Dashboard() {
                         </Link>
                     </div>
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                        {laptopsAndApple.map((item, i) => (
+                        {laptops.map((item, i) => (
                             <Card
                                 key={i}
-                                className={`overflow-hidden rounded-xl border border-gray-800 bg-sidebar transition-all hover:bg-muted ${item.badge === 'Дууссан' ? 'opacity-75' : ''}`}
+                                className={`overflow-hidden rounded-xl border border-border bg-sidebar transition-all hover:bg-muted ${item.badge === 'Дууссан' ? 'opacity-75' : ''}`}
                             >
                                 <div className="relative h-64 w-full md:h-80 lg:h-80">
                                     <img
@@ -545,12 +528,12 @@ export default function Dashboard() {
                                     <Heart className="absolute top-2 right-2 z-10 h-5 w-5 cursor-pointer transition-colors hover:fill-red-500 hover:text-red-500" />
                                 </div>
                                 <CardContent className="flex flex-col justify-between p-4">
-                                    <h3 className="mb-2 font-medium text-white">
+                                    <h3 className="mb-2 font-medium text-foreground">
                                         {item.title}
                                     </h3>
                                     <div className="mb-2 flex items-center gap-2">
                                         <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                                        <span className="text-sm font-medium text-white">
+                                        <span className="text-sm font-medium text-foreground">
                                             {item.rating}
                                         </span>
                                     </div>
@@ -576,13 +559,13 @@ export default function Dashboard() {
                                 <CardFooter className="flex items-center justify-between p-4">
                                     <Button
                                         variant="outline"
-                                        className="border-gray-700 bg-card text-muted-foreground hover:bg-gray-800 hover:text-foreground"
+                                        className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
                                         disabled={item.badge === 'Дууссан'}
                                     >
                                         Сагсанд нэмэх
                                     </Button>
                                     <span className="text-muted-foreground">
-                                        {item.value}₮
+                                        {item.price}₮
                                     </span>
                                 </CardFooter>
                             </Card>
