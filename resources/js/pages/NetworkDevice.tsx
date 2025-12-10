@@ -122,22 +122,6 @@ const products: Record<string, Product[]> = {
       badge: "Шинэ",
       image: "/banner/networkdevice/network/net-6.png",
     },
-        {
-      title: "Apple - Watch SE Gen 2 40mm / Starlight",
-      value: "950,000",
-      isfreedelivery: true,
-      stock: 8,
-      badge: "Шинэ",
-      image: "/banner/phone/smartwatch/watch-7.png",
-    },
-    {
-      title: "Apple - Watch SE Gen 2 40mm / Midnight",
-      value: "950,000",
-      isfreedelivery: true,
-      stock: 6,
-      badge: "Шинэ",
-      image: "/banner/phone/smartwatch/watch-8.png",
-    },
   ],
 };
 
