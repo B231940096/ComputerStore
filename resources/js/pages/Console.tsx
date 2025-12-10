@@ -260,25 +260,26 @@ export default function Console() {
       <Tabs value={active} onValueChange={setActive} defaultValue="cpu" className="w-full">
         {/* ===== Tabs Header (Category Buttons) ===== */}
         <TabsList
-          className="
-    flex gap-3 overflow-x-auto whitespace-nowrap scrollbar-none
-    px-4 py-2 bg-transparent
-  "
-        >
-          {categories.map((btn) => (
-            <TabsTrigger
-              key={btn.id}
-              value={btn.id}
-              className="
-        flex items-center gap-2 px-4 py-2
-        rounded-lg border border-gray-800
-        bg-sidebar text-gray-300
-        whitespace-nowrap
-        data-[state=active]:bg-white data-[state=active]:text-black
-        hover:bg-[#363234]
-        transition-all
-      "
-            >
+                  className="
+                  mt-5
+            flex gap-3  whitespace-nowrap scrollbar-none ml-auto mr-auto
+            px-4 py-2 bg-transparent
+          "
+                >
+                  {categories.map((btn) => (
+                    <TabsTrigger
+                      key={btn.id}
+                      value={btn.id}
+                      className="
+                flex items-center gap-2 px-5 py-5
+                rounded-lg border border-border
+                bg-card text-foreground
+                whitespace-nowrap
+        data-[state=active]:bg-primary data-[state=active]:text-primary-foreground
+                hover:bg-muted
+                transition-all
+              "
+                    > 
               {btn.icon}
               <span className="text-sm">{btn.label}</span>
             </TabsTrigger>
@@ -294,18 +295,18 @@ export default function Console() {
                 <h2 className="text-white text-lg font-semibold">
                   {categories.find((c) => c.id === key)?.label}
                 </h2>
-                <p className="text-gray-400">{items.length} бүтээгдэхүүн</p>
+                <p className="text-foreground">{items.length} бүтээгдэхүүн</p>
               </div>
               <div className="flex gap-2">
                 <Button
                   variant="outline"
-                  className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white"
+                  className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
                 >
                   Үнээр
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white"
+                  className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
                 >
                   Нэрээр
                 </Button>
@@ -317,7 +318,7 @@ export default function Console() {
               {items.map((product, index) => (
                 <Card
                   key={index}
-                  className="border border-gray-800 bg-sidebar rounded-xl overflow-hidden hover:bg-[#363234] transition-all"
+                  className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
                 >
                   {/* Image */}
                   {product.image && (
@@ -325,7 +326,7 @@ export default function Console() {
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full h-full object-center"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   )}
@@ -343,7 +344,7 @@ export default function Console() {
                     <Button variant="outline" className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white">
                       Сагсанд нэмэх
                     </Button>
-                    <span className="text-gray-400">{product.value}₮</span>
+                    <span className="text-foreground">{product.value}₮</span>
                   </CardFooter>
                 </Card>
               ))}

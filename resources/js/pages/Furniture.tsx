@@ -226,18 +226,25 @@ export default function Furniture() {
             <div className="mt-6">
                 <Tabs value={active} onValueChange={setActive} defaultValue="table" className="w-full">
                     {/* ===== Tabs Header (Category Buttons) ===== */}
-                    <TabsList className="w-full grid-cols-3 lg:grid-cols-6 gap-2 bg-transparent px-8 justify-center">
+                    <TabsList className="mt-5
+            flex gap-3  whitespace-nowrap scrollbar-none ml-auto mr-auto
+            px-4 py-1 bg-transparent
+          ">
                         {categories.map((btn) => (
                             <TabsTrigger
                                 key={btn.id}
                                 value={btn.id}
-                                className="flex flex-col gap-0.5 py-2 h-20 justify-center items-center 
-            bg-sidebar text-slate-300 border border-darkblue-900 
-            data-[state=active]:bg-white data-[state=active]:text-black 
-            hover:bg-[#363234] transition-all"
+                                className="flex items-center gap-2 px-5 py-5
+                rounded-lg border border-border
+                bg-card text-foreground
+                whitespace-nowrap
+        data-[state=active]:bg-primary data-[state=active]:text-primary-foreground
+                hover:bg-muted
+                transition-all
+              "
                             >
                                 {btn.icon}
-                                <span className="text-sm mt-2">{btn.label}</span>
+                                <span className="text-sm ">{btn.label}</span>
                             </TabsTrigger>
                         ))}
                     </TabsList>
@@ -273,30 +280,30 @@ export default function Furniture() {
                                 {items.map((product, index) => (
                                     <Card
                                         key={index}
-                                        className="border border-gray-800 bg-sidebar rounded-xl overflow-hidden hover:bg-[#363234] transition-all"
+                  className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
                                     >
                                         {product.image && (
                                             <div className="relative w-full h-64 md:h-80 lg:h-80">
                                                 <img
                                                     src={product.image}
                                                     alt={product.title}
-                                                    className="w-full h-full object-center"
+                                                    className="w-full h-full object-contain"
                                                 />
                                             </div>
                                         )}
 
                                         <CardContent className="p-4 flex flex-col justify-between">
-                                            <h3 className="text-white font-medium mb-2">{product.title}</h3>
+                                            <h3 className="text-foreground font-medium mb-2">{product.title}</h3>
                                             <div className="flex gap-2 mt-2 flex-wrap">
                                                 {product.badge && <Badge variant="destructive">{product.badge}</Badge>}
                                                 {product.isfreedelivery && <Badge variant="outline">Хүргэлт үнэгүй</Badge>}
                                             </div>
                                         </CardContent>
                                         <CardFooter className="flex justify-between">
-                                            <Button variant="outline" className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <Button variant="outline" className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white">
                                                 Сагсанд нэмэх
                                             </Button>
-                                            <span className="text-gray-400">{product.value}₮</span>
+                                            <span className="text-foreground">{product.value}₮</span>
                                         </CardFooter>
                                     </Card>
                                 ))}

@@ -276,23 +276,24 @@ export default function Laptop() {
         {/* ===== Tabs Header (Category Buttons) ===== */}
         <TabsList
           className="
-    flex gap-3 overflow-x-auto whitespace-nowrap scrollbar-none
-    px-4 py-2 bg-transparent
-  "
+     mt-5
+            flex gap-3  whitespace-nowrap scrollbar-none ml-auto mr-auto
+            px-4 py-2 bg-transparent
+          "
         >
           {categories.map((btn) => (
             <TabsTrigger
               key={btn.id}
               value={btn.id}
               className="
-        flex items-center gap-2 px-4 py-2
-        rounded-lg border border-gray-800
-        bg-sidebar text-gray-300
-        whitespace-nowrap
-        data-[state=active]:bg-white data-[state=active]:text-black
-        hover:bg-[#363234]
-        transition-all
-      "
+        flex items-center gap-2 px-5 py-5
+                rounded-lg border border-border
+                bg-card text-foreground
+                whitespace-nowrap
+        data-[state=active]:bg-primary data-[state=active]:text-primary-foreground
+                hover:bg-muted
+                transition-all
+              "
             >
               {btn.icon}
               <span className="text-sm">{btn.label}</span>
@@ -314,13 +315,13 @@ export default function Laptop() {
               <div className="flex gap-2">
                 <Button
                   variant="outline"
-                  className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white"
+                  className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
                 >
                   Үнээр
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white"
+                  className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
                 >
                   Нэрээр
                 </Button>
@@ -332,7 +333,7 @@ export default function Laptop() {
               {items.map((product, index) => (
                 <Card
                   key={index}
-                  className="border border-gray-800 bg-sidebar rounded-xl overflow-hidden hover:bg-[#363234] transition-all"
+                  className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
                 >
                   {/* Image */}
                   {product.image && (
@@ -340,13 +341,13 @@ export default function Laptop() {
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full h-full object-center"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   )}
 
                   <CardContent className="p-4 flex flex-col justify-between">
-                    <h3 className="text-white font-medium mb-2">{product.title}</h3>
+                    <h3 className="text-foreground font-medium mb-2">{product.title}</h3>
 
                     {/* Badges */}
                     <div className="flex gap-2 mt-2 flex-wrap">
@@ -355,10 +356,10 @@ export default function Laptop() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex justify-between">
-                    <Button variant="outline" className="border-gray-700 bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <Button variant="outline" className="border-border bg-card text-muted-foreground hover:bg-muted hover:text-muted-foreground">
                       Сагсанд нэмэх
                     </Button>
-                    <span className="text-gray-400">{product.value}₮</span>
+                    <span className="text-foreground">{product.value}₮</span>
                   </CardFooter>
                 </Card>
               ))}
