@@ -188,7 +188,7 @@ export default function Figure() {
                             <div className="relative w-full h-64 md:h-80 lg:h-80">
                                 <img
                                     src={product.image}
-                                    className="w-full h-full object-center"
+                                    className="w-full h-full object-contain"
                                 />
                             </div>
                         )}
