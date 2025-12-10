@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('slug');
             $table->string('category_id'); // Changed to string to match categories table
             $table->string('image')->nullable();
-            $table->decimal('price', 15, 2);
+            $table->string('price',)->nullable();
             $table->float('rating')->default(0);
             $table->string('badge')->nullable();
             $table->boolean('is_free_delivery')->default(false);
