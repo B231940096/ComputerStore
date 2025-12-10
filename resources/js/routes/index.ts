@@ -211,7 +211,8 @@ register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     register.form = registerForm
 /**
- * @see routes/web.php:12
+* @see \App\Http\Controllers\ProductController::dashboard
+ * @see app/Http/Controllers/ProductController.php:12
  * @route '/dashboard'
  */
 export const dashboard = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -225,7 +226,8 @@ dashboard.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:12
+* @see \App\Http\Controllers\ProductController::dashboard
+ * @see app/Http/Controllers/ProductController.php:12
  * @route '/dashboard'
  */
 dashboard.url = (options?: RouteQueryOptions) => {
@@ -233,7 +235,8 @@ dashboard.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:12
+* @see \App\Http\Controllers\ProductController::dashboard
+ * @see app/Http/Controllers/ProductController.php:12
  * @route '/dashboard'
  */
 dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -241,7 +244,8 @@ dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:12
+* @see \App\Http\Controllers\ProductController::dashboard
+ * @see app/Http/Controllers/ProductController.php:12
  * @route '/dashboard'
  */
 dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -250,7 +254,8 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:12
+* @see \App\Http\Controllers\ProductController::dashboard
+ * @see app/Http/Controllers/ProductController.php:12
  * @route '/dashboard'
  */
     const dashboardForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -259,7 +264,8 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:12
+* @see \App\Http\Controllers\ProductController::dashboard
+ * @see app/Http/Controllers/ProductController.php:12
  * @route '/dashboard'
  */
         dashboardForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -267,7 +273,8 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:12
+* @see \App\Http\Controllers\ProductController::dashboard
+ * @see app/Http/Controllers/ProductController.php:12
  * @route '/dashboard'
  */
         dashboardForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -282,7 +289,7 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     dashboard.form = dashboardForm
 /**
- * @see routes/web.php:15
+ * @see routes/web.php:13
  * @route '/home'
  */
 export const home = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -296,7 +303,7 @@ home.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:15
+ * @see routes/web.php:13
  * @route '/home'
  */
 home.url = (options?: RouteQueryOptions) => {
@@ -304,7 +311,7 @@ home.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:15
+ * @see routes/web.php:13
  * @route '/home'
  */
 home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -312,7 +319,7 @@ home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:15
+ * @see routes/web.php:13
  * @route '/home'
  */
 home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -321,7 +328,7 @@ home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:15
+ * @see routes/web.php:13
  * @route '/home'
  */
     const homeForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -330,7 +337,7 @@ home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:15
+ * @see routes/web.php:13
  * @route '/home'
  */
         homeForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -338,7 +345,7 @@ home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:15
+ * @see routes/web.php:13
  * @route '/home'
  */
         homeForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -353,7 +360,8 @@ home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     home.form = homeForm
 /**
- * @see routes/web.php:18
+* @see \App\Http\Controllers\ProductController::computerparts
+ * @see app/Http/Controllers/ProductController.php:68
  * @route '/computerparts'
  */
 export const computerparts = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -367,7 +375,8 @@ computerparts.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:18
+* @see \App\Http\Controllers\ProductController::computerparts
+ * @see app/Http/Controllers/ProductController.php:68
  * @route '/computerparts'
  */
 computerparts.url = (options?: RouteQueryOptions) => {
@@ -375,7 +384,8 @@ computerparts.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:18
+* @see \App\Http\Controllers\ProductController::computerparts
+ * @see app/Http/Controllers/ProductController.php:68
  * @route '/computerparts'
  */
 computerparts.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -383,7 +393,8 @@ computerparts.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:18
+* @see \App\Http\Controllers\ProductController::computerparts
+ * @see app/Http/Controllers/ProductController.php:68
  * @route '/computerparts'
  */
 computerparts.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -392,7 +403,8 @@ computerparts.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
 })
 
     /**
- * @see routes/web.php:18
+* @see \App\Http\Controllers\ProductController::computerparts
+ * @see app/Http/Controllers/ProductController.php:68
  * @route '/computerparts'
  */
     const computerpartsForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -401,7 +413,8 @@ computerparts.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
     })
 
             /**
- * @see routes/web.php:18
+* @see \App\Http\Controllers\ProductController::computerparts
+ * @see app/Http/Controllers/ProductController.php:68
  * @route '/computerparts'
  */
         computerpartsForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -409,7 +422,8 @@ computerparts.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
             method: 'get',
         })
             /**
- * @see routes/web.php:18
+* @see \App\Http\Controllers\ProductController::computerparts
+ * @see app/Http/Controllers/ProductController.php:68
  * @route '/computerparts'
  */
         computerpartsForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -424,7 +438,8 @@ computerparts.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
     
     computerparts.form = computerpartsForm
 /**
- * @see routes/web.php:21
+* @see \App\Http\Controllers\ProductController::furniture
+ * @see app/Http/Controllers/ProductController.php:125
  * @route '/furniture'
  */
 export const furniture = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -438,7 +453,8 @@ furniture.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:21
+* @see \App\Http\Controllers\ProductController::furniture
+ * @see app/Http/Controllers/ProductController.php:125
  * @route '/furniture'
  */
 furniture.url = (options?: RouteQueryOptions) => {
@@ -446,7 +462,8 @@ furniture.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:21
+* @see \App\Http\Controllers\ProductController::furniture
+ * @see app/Http/Controllers/ProductController.php:125
  * @route '/furniture'
  */
 furniture.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -454,7 +471,8 @@ furniture.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:21
+* @see \App\Http\Controllers\ProductController::furniture
+ * @see app/Http/Controllers/ProductController.php:125
  * @route '/furniture'
  */
 furniture.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -463,7 +481,8 @@ furniture.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:21
+* @see \App\Http\Controllers\ProductController::furniture
+ * @see app/Http/Controllers/ProductController.php:125
  * @route '/furniture'
  */
     const furnitureForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -472,7 +491,8 @@ furniture.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:21
+* @see \App\Http\Controllers\ProductController::furniture
+ * @see app/Http/Controllers/ProductController.php:125
  * @route '/furniture'
  */
         furnitureForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -480,7 +500,8 @@ furniture.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:21
+* @see \App\Http\Controllers\ProductController::furniture
+ * @see app/Http/Controllers/ProductController.php:125
  * @route '/furniture'
  */
         furnitureForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -495,7 +516,8 @@ furniture.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     furniture.form = furnitureForm
 /**
- * @see routes/web.php:24
+* @see \App\Http\Controllers\ProductController::preBuiltPc
+ * @see app/Http/Controllers/ProductController.php:177
  * @route '/pre-built-pc'
  */
 export const preBuiltPc = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -509,7 +531,8 @@ preBuiltPc.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:24
+* @see \App\Http\Controllers\ProductController::preBuiltPc
+ * @see app/Http/Controllers/ProductController.php:177
  * @route '/pre-built-pc'
  */
 preBuiltPc.url = (options?: RouteQueryOptions) => {
@@ -517,7 +540,8 @@ preBuiltPc.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:24
+* @see \App\Http\Controllers\ProductController::preBuiltPc
+ * @see app/Http/Controllers/ProductController.php:177
  * @route '/pre-built-pc'
  */
 preBuiltPc.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -525,7 +549,8 @@ preBuiltPc.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:24
+* @see \App\Http\Controllers\ProductController::preBuiltPc
+ * @see app/Http/Controllers/ProductController.php:177
  * @route '/pre-built-pc'
  */
 preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -534,7 +559,8 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:24
+* @see \App\Http\Controllers\ProductController::preBuiltPc
+ * @see app/Http/Controllers/ProductController.php:177
  * @route '/pre-built-pc'
  */
     const preBuiltPcForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -543,7 +569,8 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:24
+* @see \App\Http\Controllers\ProductController::preBuiltPc
+ * @see app/Http/Controllers/ProductController.php:177
  * @route '/pre-built-pc'
  */
         preBuiltPcForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -551,7 +578,8 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:24
+* @see \App\Http\Controllers\ProductController::preBuiltPc
+ * @see app/Http/Controllers/ProductController.php:177
  * @route '/pre-built-pc'
  */
         preBuiltPcForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -566,7 +594,8 @@ preBuiltPc.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     preBuiltPc.form = preBuiltPcForm
 /**
- * @see routes/web.php:27
+* @see \App\Http\Controllers\ProductController::peripherals
+ * @see app/Http/Controllers/ProductController.php:88
  * @route '/peripherals'
  */
 export const peripherals = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -580,7 +609,8 @@ peripherals.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:27
+* @see \App\Http\Controllers\ProductController::peripherals
+ * @see app/Http/Controllers/ProductController.php:88
  * @route '/peripherals'
  */
 peripherals.url = (options?: RouteQueryOptions) => {
@@ -588,7 +618,8 @@ peripherals.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:27
+* @see \App\Http\Controllers\ProductController::peripherals
+ * @see app/Http/Controllers/ProductController.php:88
  * @route '/peripherals'
  */
 peripherals.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -596,7 +627,8 @@ peripherals.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:27
+* @see \App\Http\Controllers\ProductController::peripherals
+ * @see app/Http/Controllers/ProductController.php:88
  * @route '/peripherals'
  */
 peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -605,7 +637,8 @@ peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:27
+* @see \App\Http\Controllers\ProductController::peripherals
+ * @see app/Http/Controllers/ProductController.php:88
  * @route '/peripherals'
  */
     const peripheralsForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -614,7 +647,8 @@ peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:27
+* @see \App\Http\Controllers\ProductController::peripherals
+ * @see app/Http/Controllers/ProductController.php:88
  * @route '/peripherals'
  */
         peripheralsForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -622,7 +656,8 @@ peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:27
+* @see \App\Http\Controllers\ProductController::peripherals
+ * @see app/Http/Controllers/ProductController.php:88
  * @route '/peripherals'
  */
         peripheralsForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -637,7 +672,8 @@ peripherals.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     peripherals.form = peripheralsForm
 /**
- * @see routes/web.php:30
+* @see \App\Http\Controllers\ProductController::console
+ * @see app/Http/Controllers/ProductController.php:153
  * @route '/console'
  */
 export const console = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -651,7 +687,8 @@ console.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:30
+* @see \App\Http\Controllers\ProductController::console
+ * @see app/Http/Controllers/ProductController.php:153
  * @route '/console'
  */
 console.url = (options?: RouteQueryOptions) => {
@@ -659,7 +696,8 @@ console.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:30
+* @see \App\Http\Controllers\ProductController::console
+ * @see app/Http/Controllers/ProductController.php:153
  * @route '/console'
  */
 console.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -667,7 +705,8 @@ console.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:30
+* @see \App\Http\Controllers\ProductController::console
+ * @see app/Http/Controllers/ProductController.php:153
  * @route '/console'
  */
 console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -676,7 +715,8 @@ console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:30
+* @see \App\Http\Controllers\ProductController::console
+ * @see app/Http/Controllers/ProductController.php:153
  * @route '/console'
  */
     const consoleForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -685,7 +725,8 @@ console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:30
+* @see \App\Http\Controllers\ProductController::console
+ * @see app/Http/Controllers/ProductController.php:153
  * @route '/console'
  */
         consoleForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -693,7 +734,8 @@ console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:30
+* @see \App\Http\Controllers\ProductController::console
+ * @see app/Http/Controllers/ProductController.php:153
  * @route '/console'
  */
         consoleForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -708,7 +750,8 @@ console.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     console.form = consoleForm
 /**
- * @see routes/web.php:33
+* @see \App\Http\Controllers\ProductController::laptop
+ * @see app/Http/Controllers/ProductController.php:53
  * @route '/laptop'
  */
 export const laptop = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -722,7 +765,8 @@ laptop.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:33
+* @see \App\Http\Controllers\ProductController::laptop
+ * @see app/Http/Controllers/ProductController.php:53
  * @route '/laptop'
  */
 laptop.url = (options?: RouteQueryOptions) => {
@@ -730,7 +774,8 @@ laptop.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:33
+* @see \App\Http\Controllers\ProductController::laptop
+ * @see app/Http/Controllers/ProductController.php:53
  * @route '/laptop'
  */
 laptop.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -738,7 +783,8 @@ laptop.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:33
+* @see \App\Http\Controllers\ProductController::laptop
+ * @see app/Http/Controllers/ProductController.php:53
  * @route '/laptop'
  */
 laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -747,7 +793,8 @@ laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:33
+* @see \App\Http\Controllers\ProductController::laptop
+ * @see app/Http/Controllers/ProductController.php:53
  * @route '/laptop'
  */
     const laptopForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -756,7 +803,8 @@ laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:33
+* @see \App\Http\Controllers\ProductController::laptop
+ * @see app/Http/Controllers/ProductController.php:53
  * @route '/laptop'
  */
         laptopForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -764,7 +812,8 @@ laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:33
+* @see \App\Http\Controllers\ProductController::laptop
+ * @see app/Http/Controllers/ProductController.php:53
  * @route '/laptop'
  */
         laptopForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -779,7 +828,8 @@ laptop.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     laptop.form = laptopForm
 /**
- * @see routes/web.php:36
+* @see \App\Http\Controllers\ProductController::phone
+ * @see app/Http/Controllers/ProductController.php:108
  * @route '/phone'
  */
 export const phone = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -793,7 +843,8 @@ phone.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:36
+* @see \App\Http\Controllers\ProductController::phone
+ * @see app/Http/Controllers/ProductController.php:108
  * @route '/phone'
  */
 phone.url = (options?: RouteQueryOptions) => {
@@ -801,7 +852,8 @@ phone.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:36
+* @see \App\Http\Controllers\ProductController::phone
+ * @see app/Http/Controllers/ProductController.php:108
  * @route '/phone'
  */
 phone.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -809,7 +861,8 @@ phone.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:36
+* @see \App\Http\Controllers\ProductController::phone
+ * @see app/Http/Controllers/ProductController.php:108
  * @route '/phone'
  */
 phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -818,7 +871,8 @@ phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:36
+* @see \App\Http\Controllers\ProductController::phone
+ * @see app/Http/Controllers/ProductController.php:108
  * @route '/phone'
  */
     const phoneForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -827,7 +881,8 @@ phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:36
+* @see \App\Http\Controllers\ProductController::phone
+ * @see app/Http/Controllers/ProductController.php:108
  * @route '/phone'
  */
         phoneForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -835,7 +890,8 @@ phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:36
+* @see \App\Http\Controllers\ProductController::phone
+ * @see app/Http/Controllers/ProductController.php:108
  * @route '/phone'
  */
         phoneForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -850,7 +906,8 @@ phone.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     phone.form = phoneForm
 /**
- * @see routes/web.php:39
+* @see \App\Http\Controllers\ProductController::networkdevice
+ * @see app/Http/Controllers/ProductController.php:139
  * @route '/networkdevice'
  */
 export const networkdevice = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -864,7 +921,8 @@ networkdevice.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:39
+* @see \App\Http\Controllers\ProductController::networkdevice
+ * @see app/Http/Controllers/ProductController.php:139
  * @route '/networkdevice'
  */
 networkdevice.url = (options?: RouteQueryOptions) => {
@@ -872,7 +930,8 @@ networkdevice.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:39
+* @see \App\Http\Controllers\ProductController::networkdevice
+ * @see app/Http/Controllers/ProductController.php:139
  * @route '/networkdevice'
  */
 networkdevice.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -880,7 +939,8 @@ networkdevice.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:39
+* @see \App\Http\Controllers\ProductController::networkdevice
+ * @see app/Http/Controllers/ProductController.php:139
  * @route '/networkdevice'
  */
 networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -889,7 +949,8 @@ networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
 })
 
     /**
- * @see routes/web.php:39
+* @see \App\Http\Controllers\ProductController::networkdevice
+ * @see app/Http/Controllers/ProductController.php:139
  * @route '/networkdevice'
  */
     const networkdeviceForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -898,7 +959,8 @@ networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
     })
 
             /**
- * @see routes/web.php:39
+* @see \App\Http\Controllers\ProductController::networkdevice
+ * @see app/Http/Controllers/ProductController.php:139
  * @route '/networkdevice'
  */
         networkdeviceForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -906,7 +968,8 @@ networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
             method: 'get',
         })
             /**
- * @see routes/web.php:39
+* @see \App\Http\Controllers\ProductController::networkdevice
+ * @see app/Http/Controllers/ProductController.php:139
  * @route '/networkdevice'
  */
         networkdeviceForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -921,7 +984,8 @@ networkdevice.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
     
     networkdevice.form = networkdeviceForm
 /**
- * @see routes/web.php:42
+* @see \App\Http\Controllers\ProductController::figure
+ * @see app/Http/Controllers/ProductController.php:167
  * @route '/figure'
  */
 export const figure = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -935,7 +999,8 @@ figure.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:42
+* @see \App\Http\Controllers\ProductController::figure
+ * @see app/Http/Controllers/ProductController.php:167
  * @route '/figure'
  */
 figure.url = (options?: RouteQueryOptions) => {
@@ -943,7 +1008,8 @@ figure.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:42
+* @see \App\Http\Controllers\ProductController::figure
+ * @see app/Http/Controllers/ProductController.php:167
  * @route '/figure'
  */
 figure.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -951,7 +1017,8 @@ figure.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:42
+* @see \App\Http\Controllers\ProductController::figure
+ * @see app/Http/Controllers/ProductController.php:167
  * @route '/figure'
  */
 figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -960,7 +1027,8 @@ figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:42
+* @see \App\Http\Controllers\ProductController::figure
+ * @see app/Http/Controllers/ProductController.php:167
  * @route '/figure'
  */
     const figureForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -969,7 +1037,8 @@ figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:42
+* @see \App\Http\Controllers\ProductController::figure
+ * @see app/Http/Controllers/ProductController.php:167
  * @route '/figure'
  */
         figureForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -977,7 +1046,8 @@ figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:42
+* @see \App\Http\Controllers\ProductController::figure
+ * @see app/Http/Controllers/ProductController.php:167
  * @route '/figure'
  */
         figureForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -992,7 +1062,7 @@ figure.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     figure.form = figureForm
 /**
- * @see routes/web.php:45
+ * @see routes/web.php:27
  * @route '/basket'
  */
 export const basket = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1006,7 +1076,7 @@ basket.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:45
+ * @see routes/web.php:27
  * @route '/basket'
  */
 basket.url = (options?: RouteQueryOptions) => {
@@ -1014,7 +1084,7 @@ basket.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:45
+ * @see routes/web.php:27
  * @route '/basket'
  */
 basket.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1022,7 +1092,7 @@ basket.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:45
+ * @see routes/web.php:27
  * @route '/basket'
  */
 basket.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1031,7 +1101,7 @@ basket.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:45
+ * @see routes/web.php:27
  * @route '/basket'
  */
     const basketForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1040,7 +1110,7 @@ basket.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:45
+ * @see routes/web.php:27
  * @route '/basket'
  */
         basketForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1048,7 +1118,7 @@ basket.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:45
+ * @see routes/web.php:27
  * @route '/basket'
  */
         basketForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
