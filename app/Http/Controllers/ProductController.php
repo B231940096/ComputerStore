@@ -66,23 +66,20 @@ class ProductController extends Controller
 
     // Computer Parts хуудас
     public function computerParts()
-    {
-        $products = [
-            'cpu' => Product::where('category_id', 'cpu')->get(),
-            'gpu' => Product::where('category_id', 'gpu')->get(),
-            'ram' => Product::where('category_id', 'ram')->get(),
-            'storage' => Product::where('category_id', 'storage')->get(),
-            'motherboard' => Product::where('category_id', 'motherboard')->get(),
-            'power_supply' => Product::where('category_id', 'power_supply')->get(),
-            'fan' => Product::where('category_id', 'fan')->get(),
-            'cpu_cooler' => Product::where('category_id', 'cpu_cooler')->get(),
-            'case' => Product::where('category_id', 'case')->get(),
-        ];
+{
+    return Inertia::render('ComputerParts', [
+        'cpu' => Product::where('category_id', 'cpu')->get(),
+        'gpu' => Product::where('category_id', 'gpu')->get(),
+        'ram' => Product::where('category_id', 'ram')->get(),
+        'storage' => Product::where('category_id', 'storage')->get(),
+        'motherboard' => Product::where('category_id', 'motherboard')->get(),
+        'power_supply' => Product::where('category_id', 'power_supply')->get(),
+        'fan' => Product::where('category_id', 'fan')->get(),
+        'cpu_cooler' => Product::where('category_id', 'cpu_cooler')->get(),
+        'case' => Product::where('category_id', 'case')->get(),
+    ]);
+}
 
-        return Inertia::render('ComputerParts', [
-            'products' => $products
-        ]);
-    }
 
     // Peripherals хуудас
     public function peripherals()
